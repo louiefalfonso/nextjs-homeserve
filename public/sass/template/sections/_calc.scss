@@ -1,0 +1,58 @@
+.vscost {
+  &__overlay {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--black-color);
+    opacity: 0.3;
+    z-index: -3;
+  }
+  &__shape {
+    position: absolute;
+    content: "";
+    min-height: 79px;
+    background-color: var(--white-color);
+    width: 100%;
+    bottom: -1px;
+    z-index: -1;
+  }
+  &__shape2 {
+    position: absolute;
+    z-index: -2;
+    bottom: 0px;
+    left: 0;
+    & > svg {
+      width: 100%;
+      @include respond-below(xxlg) {
+        height: 523px;
+      }
+    }
+  }
+  &-calc {
+    background-color: var(--black-color);
+    padding: 83px 72px;
+    @include respond-below(sm) {
+      padding: 25px 20px;
+    }
+    &__text {
+      color: var(--white-color);
+    }
+    &__amount {
+      &__title {
+        color: var(--white-color);
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+      &__total {
+        font-size: 46px;
+        font-weight: 700;
+        color: var(--white-color);
+      }
+    }
+  }
+}

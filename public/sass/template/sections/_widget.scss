@@ -1,0 +1,32 @@
+.consik {
+  &-widget {
+    $self: &;
+    &--style {
+      background-color: var(--bg-color4);
+      min-height: 340px;
+      padding: 45px 50px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 30px;
+      @include respond-below(lg) {
+        padding: 30px 30px;
+      }
+      #{$self}__body {
+        max-width: 68%;
+        @include respond-below(lg) {
+          max-width: 85%;
+        }
+      }
+      #{$self}__img,
+      #{$self}__element {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: 0;
+      }
+      #{$self}__element {
+        z-index: -2;
+      }
+    }
+  }
+}

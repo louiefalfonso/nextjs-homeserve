@@ -1,0 +1,243 @@
+.vsteam {
+  &-style {
+    $self: &;
+    border: 1px solid var(--silverLight-color);
+    position: relative;
+    z-index: 3;
+    margin-bottom: 30px;
+    &__media {
+      text-align: center;
+    }
+    &__content {
+      padding: 38px 47px 20px;
+      @include respond-below(lg) {
+        padding: 38px 29px 20px;
+      }
+    }
+    &__title {
+      margin-bottom: 8px;
+      line-height: 1;
+      font-size: 30px;
+      @include respond-below(lg) {
+        font-size: 24px;
+      }
+      &__link {
+        color: var(--black-color);
+        &:hover {
+          color: var(--theme-color);
+        }
+      }
+    }
+    &__designation {
+      margin-bottom: 20px;
+      display: inline-block;
+      color: var(--theme-color);
+    }
+    &__shape {
+      position: absolute;
+      bottom: -1px;
+      left: -1px;
+      z-index: -1;
+      @include respond-below(sm) {
+        width: 100%;
+      }
+      & > svg {
+        path {
+          @include transition-delay(3, 0.1s);
+          @include smooth-transition;
+          fill: var(--theme-color);
+        }
+        @include respond-below(lg) {
+          width: 100%;
+        }
+      }
+    }
+    &__social {
+      position: absolute;
+      right: 0;
+      bottom: 30px;
+      left: 0;
+      overflow: hidden;
+      & > ul {
+        justify-content: center;
+        li {
+          transform: translateY(60px);
+          opacity: 0;
+          visibility: hidden;
+          @include transition-delay(3, 0.1s);
+          @include smooth-transition;
+          & > a {
+            &:hover {
+              color: var(--white-color);
+            }
+            &::before,
+            &::after {
+              background-color: var(--black-color);
+            }
+          }
+        }
+      }
+    }
+    &:hover,
+    &.hovered {
+      #{$self}__social {
+        & > ul {
+          li {
+            transform: translateY(0px);
+            opacity: 1;
+            visibility: visible;
+            @include transition-delay(3, 0.1s);
+            @include smooth-transition;
+          }
+        }
+      }
+      #{$self}__shape {
+        & > svg {
+          path {
+            fill: var(--black-color);
+            @include transition-delay(3, 0.1s);
+            @include smooth-transition;
+          }
+        }
+      }
+    }
+  }
+  &-block {
+    $self: &;
+    &--style,
+    &--style2 {
+      border: 1px solid var(--border-color);
+      border-top-color: var(--white-color);
+      padding: 0 0 40px 59px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 30px;
+      background: var(--white-color);
+      @include smooth-transition;
+      @include respond-below(lg) {
+        padding: 0 0 40px 49px;
+      }
+      @include respond-below(sm) {
+        padding: 0 0 40px 52px;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        min-height: 102px;
+        background-color: var(--white-color);
+        z-index: -1;
+        left: -1px;
+        top: 0px;
+      }
+      .social-style {
+        position: absolute;
+        top: 102px;
+        left: -1px;
+        & > ul {
+          flex-direction: column;
+          gap: 0;
+          & > li {
+            & > a {
+              background-color: var(--theme-color);
+              color: var(--white-color);
+              border: 1px solid var(--border-color);
+              border-bottom: none;
+              &::before,
+              &::after {
+                background-color: var(--black-color);
+              }
+              &:hover {
+                color: var(--white-color);
+                box-shadow: 11px 18px 10px #0404040d;
+                border-color: var(--black-color);
+              }
+            }
+            &:last-child {
+              border-bottom: 1px solid var(--border-color);
+            }
+          }
+        }
+      }
+      #{$self}__media {
+        margin: 0 -21px 30px 0;
+        @include respond-below(lg) {
+          margin: 0 -15px 30px 0;
+        }
+      }
+      #{$self}__member {
+        &--img {
+          @include respond-below(md) {
+            width: 100%;
+          }
+        }
+      }
+      #{$self}__designation {
+        color: var(--text-color);
+      }
+      #{$self}__title {
+        margin-bottom: 0;
+        &__link {
+          color: var(--black-color);
+          font-size: 26px;
+          &:hover {
+            color: var(--theme-color);
+          }
+        }
+      }
+      &:hover {
+        box-shadow: 11px 18px 10px #0404040d;
+        @include smooth-transition;
+      }
+    }
+    &--style2 {
+      padding: 0 0 70px 103px;
+      background-color: var(--grey-color);
+      border: none;
+      @include respond-below(sm) {
+        padding: 0 0 30px 30px;
+      }
+      &::before {
+        min-height: 40px;
+      }
+      &:hover {
+        box-shadow: none;
+      }
+      #{$self}__media {
+        margin: 0;
+      }
+      .social-style {
+        left: 25px;
+        top: 70px;
+        @include respond-below(sm) {
+          left: 0;
+        }
+        & > ul {
+          & > li {
+            & > a {
+              background-color: var(--theme-color);
+            }
+          }
+        }
+      }
+      #{$self}__title {
+        &__link {
+          font-size: 50px;
+          @include respond-below(sm) {
+            font-size: 35px;
+          }
+        }
+      }
+      #{$self}__content {
+        padding-top: 110px;
+        @include respond-below(md) {
+          padding-top: 30px;
+        }
+      }
+      #{$self}__designation {
+        margin-bottom: 25px;
+        display: inline-block;
+      }
+    }
+  }
+}

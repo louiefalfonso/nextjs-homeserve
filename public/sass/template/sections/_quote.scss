@@ -1,0 +1,18 @@
+.quote {
+  &--layout1 {
+    padding: 80px 0;
+    background-position: 630px 0;
+    background-color: var(--theme-color);
+    @include respond-below(lg) {
+      background-position: 150px 0;
+    }
+  }
+  &__img {
+    left: 63px;
+  }
+  &__shape {
+    @include respond-below(lg) {
+      display: none;
+    }
+  }
+}

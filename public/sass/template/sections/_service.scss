@@ -1,0 +1,189 @@
+.service {
+  &--layout1,
+  &--layout4 {
+    .slick-list {
+      margin: 0 -15px;
+      @include respond-below(sm) {
+        margin: 0 -12px;
+      }
+    }
+    .slick-slide {
+      padding: 0 15px;
+      @include respond-below(sm) {
+        padding: 0 12px;
+      }
+    }
+  }
+  &--layout4 {
+    background-color: var(--grey-color);
+  }
+}
+.service-block {
+  $self: &;
+  text-align: center;
+  border: 1px solid var(--silverLight-color);
+  padding: 52px 30px 38px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-bottom: 85px;
+  background-color: var(--white-color);
+  @include respond-below(lg) {
+    padding: 52px 20px 38px;
+  }
+  @include respond-below(sm) {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  &__icon {
+    margin-bottom: 40px;
+    min-height: 75px;
+    display: flex;
+    justify-content: center;
+    @include respond-below(sm) {
+      margin-bottom: 24px;
+    }
+  }
+  &__title {
+    font-size: 22px;
+    &__link {
+      color: var(--black-color);
+      &:hover {
+        color: var(--theme-color);
+      }
+    }
+    @include respond-below(lg) {
+      font-size: 20px;
+    }
+    @include respond-below(sm) {
+      font-size: 18px;
+    }
+  }
+  &__text {
+    margin-bottom: 39px;
+  }
+  &__link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 33px;
+    border: 1px solid var(--black-color);
+    min-width: 98px;
+    background-color: var(--black-color);
+    fill: white;
+    &:hover {
+      border-color: var(--theme-color);
+      background-color: var(--theme-color);
+    }
+  }
+  &__shape {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    @include smooth-transition;
+    & path {
+      @include smooth-transition;
+      fill: var(--theme-color);
+    }
+  }
+  &:hover {
+    #{$self}__link {
+      background-color: var(--theme-color);
+      border-color: var(--theme-color);
+    }
+    #{$self}__shape {
+      transform: scale(1.1);
+      & path {
+        fill: var(--black-color);
+      }
+    }
+  }
+  &--style2 {
+    min-height: 485px;
+    display: flex;
+    align-items: end;
+    padding: 0 20px 20px 0;
+    position: relative;
+    margin-bottom: 30px;
+    #{$self}__body {
+      background-color: var(--white-color);
+      padding: 0px 38px 26px;
+      position: absolute;
+      left: 0;
+      max-width: 95%;
+      bottom: 20px;
+      @include transition-delay(3, 0.1s);
+      @include smooth-transition;
+      @include respond-below(sm) {
+        padding: 0px 15px 20px;
+      }
+    }
+    #{$self}__icon {
+      display: inline-flex;
+      min-width: 81px;
+      min-height: 81px;
+      background-color: var(--theme-color);
+      margin-top: -59px;
+      margin-bottom: 17px;
+    }
+    #{$self}__title {
+      margin-bottom: 0px;
+    }
+    #{$self}__text {
+      margin-bottom: 27px;
+      padding-top: 17px;
+    }
+    #{$self}__hide {
+      max-height: 0px;
+      opacity: 0;
+      transition: max-height 1s ease 0s, opacity 1s ease 0s,
+        transform 1s ease 0s;
+      transform-origin: center top;
+      padding-bottom: 1px;
+    }
+    #{$self}__link {
+      background-color: var(--theme-color);
+      border: 1px solid var(--theme-color);
+      fill: var(--white-color);
+      &:hover {
+        background-color: var(--black-color);
+        border: 1px solid var(--black-color);
+      }
+    }
+    &:hover {
+      #{$self}__hide {
+        max-height: 500px; /* Adjust as needed */
+        opacity: 1;
+        transform: scaleY(1);
+        transition: max-height 1s ease 0s, opacity 1s ease 0s,
+          transform 1s ease 0s;
+      }
+    }
+  }
+}
+
+.icon-box1 {
+  position: absolute;
+  top: 34px;
+  left: 40px;
+  min-width: 81px;
+  min-height: 81px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--theme-color);
+  &::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    right: -1px;
+    background-color: var(--theme-color);
+    height: 15px;
+    width: 35px;
+    clip-path: polygon(12% 0, 0% 100%, 100% 100%);
+  }
+}

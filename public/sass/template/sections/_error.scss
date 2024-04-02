@@ -1,0 +1,43 @@
+.error,
+.comming {
+  &-content {
+    margin-bottom: 117px;
+    .sec-title {
+      font-size: 260px;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--white-color);
+      margin: 0 0 0px 0;
+    }
+    .sec-title2 {
+      font-size: 40px;
+      margin: 0 0 10px 0;
+      & > span {
+        color: var(--theme-color);
+      }
+    }
+    .error-content__text {
+      color: var(--white-color);
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+  }
+}
+.comming {
+  &-content {
+    .sec-title {
+      font-size: 25px;
+      letter-spacing: 0.525em;
+      margin-bottom: 15px;
+      @include respond-below(sm) {
+        font-size: 18px;
+      }
+    }
+    .sec-title2 {
+      font-size: 60px;
+      @include respond-below(sm) {
+        font-size: 30px;
+      }
+    }
+  }
+}

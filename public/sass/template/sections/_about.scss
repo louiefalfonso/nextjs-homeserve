@@ -1,0 +1,305 @@
+.img-box1,
+.img-box1--style2 {
+  display: flex;
+  gap: 41px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+  @include respond-below(sm) {
+    gap: 15px;
+  }
+  &__shape {
+    position: absolute;
+    min-width: 356px;
+    min-height: 439px;
+    background-color: var(--theme-color);
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include respond-below(sm) {
+      min-width: 200px;
+      min-height: 230px;
+    }
+  }
+  &__img2 {
+    text-align: center;
+    margin-bottom: 47.3px;
+    padding-top: 18px;
+    @include respond-below(sm) {
+      margin-bottom: 15px;
+    }
+  }
+  .vs-infobox--style {
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+    min-width: 348px;
+    box-shadow: 11px 18px 10px #0404040d;
+    @include respond-below(sm) {
+      min-width: 100%;
+      bottom: 0;
+      box-shadow: 11px -18px 10px rgba(4, 4, 4, 0.0509803922);
+    }
+  }
+}
+.img-box1 {
+  $self: &;
+  &--style2 {
+    gap: 30px;
+    @include respond-below(md) {
+      justify-content: center;
+    }
+    @include respond-below(sm) {
+      flex-wrap: wrap;
+    }
+    #{$self}__img2,
+    #{$self}__img1 {
+      margin-bottom: 30px;
+      padding-top: 0;
+    }
+    #{$self}__img1,
+    #{$self}__img2,
+    #{$self}__img3 {
+      & > img {
+        @include respond-below(sm) {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    #{$self}__img1 {
+      padding-top: 99px;
+      @include respond-below(sm) {
+        padding-top: 0;
+      }
+    }
+    #{$self}__left,
+    #{$self}__right {
+      @include respond-below(sm) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.about {
+  $self: &;
+  &--layout1 {
+    #{$self}-overlay {
+      right: -204px;
+    }
+  }
+  &-overlay {
+    &--style2 {
+      opacity: 0.1;
+      z-index: -1;
+    }
+  }
+  &-content {
+    max-width: 85%;
+    margin-bottom: 30px;
+    @include respond-below(xl) {
+      max-width: 100%;
+    }
+  }
+}
+.list-style4 {
+  padding-top: 0px;
+  margin-bottom: 0;
+  .list-unstyled {
+    margin-bottom: 0;
+  }
+  li {
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &::before {
+      margin-right: 19px;
+    }
+  }
+}
+.about {
+  &--layout3 {
+    .play-btn2 {
+      position: absolute;
+      bottom: -83.5px;
+      right: 42px;
+      @include respond-below(sm) {
+        position: absolute;
+        bottom: auto;
+        top: -36px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        --icon-size: 72px;
+      }
+    }
+  }
+  &-text {
+    &--style3 {
+      margin-bottom: 40px;
+    }
+  }
+  &-widget {
+    padding: 50px 53px 4px 40px;
+    max-width: 456px;
+    margin-top: -190px;
+    background: var(--white-color);
+    position: relative;
+    z-index: 1;
+    margin-left: -218px;
+    margin-bottom: 30px;
+    @include respond-below(lg) {
+      padding: 50px 53px 45px 40px;
+    }
+    @include respond-below(lg) {
+      padding: 0;
+      margin-top: 0;
+      margin-left: 0;
+      background-color: transparent;
+    }
+  }
+  &-img {
+    &--style3 {
+      margin-bottom: 30px;
+      position: relative;
+      @include respond-below(md) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.history-style {
+  margin-bottom: 30px;
+  @include respond-below(sm) {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .nav-pills {
+    position: relative;
+    gap: 30px;
+    @include respond-below(sm) {
+      flex-direction: row !important;
+      justify-content: center;
+    }
+    &::after {
+      content: "";
+      width: 3px;
+      height: 90%;
+      background-color: var(--black-color);
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @include respond-below(sm) {
+        display: none;
+      }
+    }
+    .nav-link {
+      background-color: transparent;
+      border: 0;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--black-color);
+      font-family: var(--title-font);
+      padding: 0px 30px 0 0;
+      position: relative;
+      &:hover {
+        color: var(--theme-color);
+        background-color: transparent;
+      }
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) scale(1);
+        width: 33px;
+        height: 33px;
+        background-color: var(--white-color);
+        border-radius: 50%;
+        z-index: 9;
+        right: -14.5px;
+        @include smooth-transition;
+      }
+      &::before {
+        transform: translateY(-50%) scale(0.7);
+      }
+      &::after {
+        background-color: var(--black-color);
+        width: 9px;
+        height: 9px;
+        right: -2.5px;
+      }
+      &.active {
+        background-color: transparent;
+        color: var(--theme-color);
+        &::before {
+          background-color: var(--theme-color);
+          transform: translateY(-50%) scale(1);
+        }
+        &::after {
+          background-color: var(--white-color);
+        }
+      }
+    }
+  }
+}
+
+.history-block {
+  padding-left: 65px;
+  max-width: 84%;
+  @include respond-below(xl) {
+    max-width: 70%;
+  }
+  @include respond-below(sm) {
+    max-width: 100%;
+    padding-left: 0;
+  }
+  &__title {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 28px;
+    @include respond-below(xl) {
+      font-size: 30px;
+    }
+    @include respond-below(sm) {
+      font-size: 24px;
+    }
+  }
+  &__text {
+    margin-bottom: 49px;
+    max-width: 76%;
+    @include respond-below(xl) {
+      max-width: 100%;
+    }
+  }
+  &__year {
+    font-size: 100px;
+    font-weight: 900;
+    font-family: var(--title-font);
+    color: var(--black-color);
+    line-height: 1;
+  }
+}
+.history-img {
+  margin-right: -50%;
+  margin-bottom: 30px;
+  @include respond-below(xl) {
+    margin-right: 0;
+    margin-left: -50%;
+  }
+  @include respond-below(lg) {
+    margin-right: 0;
+    margin-left: 0%;
+  }
+}
+.element {
+  &--history {
+    right: -259px;
+    opacity: 0.2;
+  }
+}

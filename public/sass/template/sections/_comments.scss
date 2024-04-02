@@ -1,0 +1,398 @@
+.comment-respond {
+  position: relative;
+
+  .form-title {
+    a#cancel-comment-reply-link {
+      font-size: 0.7em;
+      text-decoration: underline;
+    }
+  }
+
+  .custom-checkbox.notice {
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  .row {
+    --bs-gutter-x: 20px;
+  }
+
+  .form-control {
+    background-color: $white-color;
+    border: none;
+    height: 55px;
+    border: 1px solid #b3b3b3;
+  }
+
+  .form-group > i {
+    top: 20.5px;
+  }
+
+  input[type="checkbox"] {
+    & ~ label {
+      &:before {
+        background-color: $white-color;
+        border: 1px solid $white-color;
+        border-radius: 3px;
+      }
+    }
+
+    &:checked {
+      ~ label {
+        &:before {
+          background-color: $theme-color;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  .form-text {
+    margin-bottom: 25px;
+  }
+
+  .form-inner {
+    background-color: transparent;
+    padding: 0 79px 0 0;
+    margin: -10px 0 0 0;
+    @include respond-below(lg) {
+      padding: 0 0 0 0;
+    }
+  }
+}
+
+.question-form,
+.review-form {
+  .comment-respond {
+    margin: 0 0 20px 0;
+  }
+
+  .form-control {
+    background-color: transparent;
+    border: 1px solid #e4e4e4;
+  }
+
+  .rating-select {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+
+    label {
+      font-weight: 500;
+      color: $title-color;
+      @include respond-below(md) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.vs-comments-wrap {
+  margin: var(--blog-space-y, 60px) 0 var(--blog-space-y, 60px) 0;
+
+  .description p:last-child {
+    margin-bottom: 0;
+  }
+
+  .comment-respond {
+    margin: 30px 0;
+  }
+
+  pre {
+    background: #ededed;
+    color: #666;
+    font-size: 14px;
+    margin: 20px 0;
+    overflow: auto;
+    padding: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  blockquote {
+    background-color: #eaf8f9;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  .vs-post-comment {
+    position: relative;
+    display: flex;
+    position: relative;
+    padding: 19px 30px 19px 0;
+    margin: 0 0 21px 0;
+    z-index: 1;
+    align-items: center;
+    @include respond-below(sm) {
+      flex-direction: column;
+      padding: 15px;
+      align-items: flex-start;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 94%;
+      height: 100%;
+      right: 0;
+      top: 0;
+      background-color: var(--grey-color);
+      z-index: -1;
+      @include respond-below(sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  ul.comment-list {
+    list-style: none;
+    margin: -10px 0 0 0;
+    padding: 0;
+
+    ul,
+    ol {
+      ul,
+      ol {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .comment-avater {
+    @include equal-size(110px);
+    margin-right: 25px;
+    overflow: hidden;
+    background-color: $white-color;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .comment-content {
+    flex: 1;
+    position: relative;
+    &__header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      @include respond-below(sm) {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .commented-on {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 0;
+    margin-top: 7px;
+    font-weight: 800;
+    color: #999999;
+    font-family: var(--title-font);
+
+    i {
+      margin-right: 7px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .name {
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .comment-top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .text {
+    &:last-of-type {
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+  }
+
+  .children {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-left: 70px;
+  }
+
+  .reply_and_edit {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    line-height: 1;
+    z-index: 1;
+  }
+
+  .replay-btn {
+    display: inline-block;
+    font-family: $title-font;
+    color: $theme-color;
+    padding: 10px 21px;
+    font-size: 14px;
+    font-weight: 800;
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    border: 1px solid var(--border-color);
+    color: var(--black-color);
+
+    i {
+      margin-right: 7px;
+      font-size: 0.8em;
+    }
+
+    &:hover {
+      background-color: var(--theme-color);
+      color: var(--white-color);
+      border-color: var(--theme-color);
+    }
+  }
+
+  .star-rating {
+    font-size: 12px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 149px;
+    height: 36px;
+    background: #fff;
+    border: 1px solid #cecece;
+  }
+}
+
+.vs-comments-wrap.vs-comment-form {
+  margin: 0;
+}
+
+@include lg {
+  .vs-comments-wrap {
+    .star-rating {
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+
+    .comment-top {
+      display: block;
+    }
+    .children {
+      margin-left: 40px;
+    }
+
+    .reply_and_edit {
+      top: 0;
+      margin: 15px 0 0 0;
+    }
+  }
+}
+
+@include md {
+  .comment-avater {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@include sm {
+  .vs-comments-wrap {
+    .children {
+      margin-left: 20px;
+    }
+
+    .name {
+      font-size: 18px;
+    }
+  }
+}
+
+.vs-comment-form {
+  margin: var(--blog-space-y, 50px) 0 var(--blog-space-y, 50px) 0;
+  &.review-form {
+    margin-bottom: 30px;
+    .blog-inner-title {
+      font-size: 36px;
+      @include respond-below(sm) {
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+.comment-respond {
+  position: relative;
+
+  .form-title {
+    a#cancel-comment-reply-link {
+      font-size: 0.7em;
+      text-decoration: underline;
+    }
+  }
+
+  .custom-checkbox.notice {
+    margin-bottom: 25px;
+  }
+
+  .row {
+    --bs-gutter-x: 20px;
+  }
+
+  .form-control {
+    border: 1px solid $border-color;
+    font-size: 16px;
+    color: $title-color;
+    background-color: transparent;
+    @include respond-below(md) {
+      font-size: 14px;
+      padding: 15px 15px 15px 17px;
+    }
+
+    @include inputPlaceholder {
+      color: $title-color;
+    }
+  }
+
+  .form-group {
+    i {
+      color: $theme-color;
+    }
+  }
+
+  input[type="checkbox"] {
+    & ~ label {
+      &:before {
+        top: 5.5px;
+      }
+    }
+
+    &:checked {
+      ~ label {
+        &:before {
+          background-color: $theme-color;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  .blog-inner-title {
+    border: none;
+  }
+
+  .form-text {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: $body-color;
+  }
+}

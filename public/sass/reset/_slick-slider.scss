@@ -1,0 +1,139 @@
+.slick-arrow {
+  display: inline-block;
+  padding: 0;
+  background-color: $white-color;
+  position: absolute;
+  top: 50%;
+  border: 1px solid $smoke-color;
+  left: var(--pos-x, -100px);
+  width: var(--icon-size, 50px);
+  height: var(--icon-size, 50px);
+  font-size: var(--icon-font-size, 18px);
+  margin-top: calc(var(--icon-size, 50px) / -2);
+  z-index: 2;
+  border-radius: 50%;
+
+  &.default {
+    position: relative;
+    --pos-x: 0;
+    margin-top: 0;
+  }
+
+  &.slick-next {
+    right: var(--pos-x, -100px);
+    left: auto;
+  }
+
+  &:hover {
+    background-color: $theme-color;
+    color: $white-color;
+    border-color: transparent;
+  }
+}
+
+.arrow-margin {
+  .slick-arrow {
+    top: calc(50% - 30px);
+  }
+}
+
+.arrow-wrap {
+  .slick-arrow {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &:hover {
+    .slick-arrow {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.dot-style2 {
+  .slick-dots {
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    button {
+      width: 10px;
+      height: 10px;
+      border-radius: 9999px;
+      background-color: $theme-color;
+
+      &:before {
+        display: none;
+      }
+
+      &:hover {
+        background-color: $title-color;
+      }
+    }
+
+    li {
+      margin: 0 5px;
+
+      &.slick-active {
+        button {
+          width: 40px;
+        }
+      }
+    }
+  }
+}
+
+@include xl {
+  .slick-arrow {
+    --arrow-horizontal: -20px;
+  }
+}
+
+@include ml {
+  .slick-arrow {
+    --arrow-horizontal: 40px;
+  }
+}
+
+@include md {
+  .slick-arrow {
+    --icon-size: 40px;
+    margin-right: 40px;
+
+    &.slick-next {
+      margin-right: 0;
+      margin-left: 40px;
+    }
+  }
+
+  .slick-dots {
+    margin: 8px 0 38px 0;
+  }
+}
+
+.slick-dots {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--theme-color);
+  & > li {
+    height: 14px;
+    & > button {
+      background-color: var(--theme-color);
+      text-indent: -99999999999px;
+      border: none;
+      min-width: 56.25px;
+      height: 14px;
+    }
+    &.slick-active {
+      & > button {
+        background-color: var(--black-color);
+      }
+    }
+  }
+}
+.slick-track {
+  min-width: 100%;
+}

@@ -1,0 +1,85 @@
+.cate {
+  &-block {
+    $self: &;
+    &--style {
+      margin-bottom: 30px;
+      #{$self}__img {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+      }
+      #{$self}__icon {
+        position: absolute;
+        min-width: 90px;
+        min-height: 90px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        bottom: -45px;
+        right: 10px;
+        background-color: var(--theme-color);
+        border-radius: 50%;
+        @include smooth-transition;
+        @include respond-below(lg) {
+          right: -15px;
+        }
+        & > img {
+          filter: brightness(0) invert(1);
+        }
+        &::before,
+        &::after {
+          content: "";
+          min-width: 77.14px;
+          min-height: 77.14px;
+          position: absolute;
+          border: 1px solid var(--white-color);
+          border-radius: 50%;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          @include smooth-transition;
+        }
+      }
+      #{$self}__title {
+        font-size: 22px;
+        font-weight: 800;
+        margin-bottom: 0;
+        position: relative;
+        max-width: 63%;
+        padding: 13px 10px 2px 0;
+        &:hover {
+          & > a {
+            color: var(--theme-color);
+          }
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          min-width: 30px;
+          min-height: 2px;
+          background-color: var(--theme-color);
+          bottom: 0;
+          left: -3px;
+        }
+        & > a {
+          color: var(--black-color);
+        }
+      }
+      &:hover {
+        #{$self}__icon {
+          background-color: var(--black-color);
+          @include smooth-transition;
+          &::before,
+          &::after {
+            @include smooth-transition;
+            border-color: var(--white-color);
+          }
+          & > img {
+            @include smooth-transition;
+            filter: brightness(0) invert(1);
+          }
+        }
+      }
+    }
+  }
+}

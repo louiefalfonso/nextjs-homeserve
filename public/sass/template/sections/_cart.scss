@@ -1,0 +1,466 @@
+.woocommerce-cart-form {
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  margin-bottom: 20px;
+  border-top-color: var(--theme-color);
+  @include respond-below(md) {
+    overflow-x: scroll;
+    border-top-color: var(--border-color);
+  }
+}
+
+.cart_table {
+  margin-bottom: 0;
+  border-radius: 20px;
+  border: none;
+
+  thead {
+    th {
+      background-color: transparent;
+      border: none;
+      color: #000000;
+      font-size: 20px;
+      font-family: var(--title-font);
+      font-weight: 700;
+      border-bottom: 2px solid var(--theme-color);
+      border-left: 2px solid var(--theme-color);
+      border-right: 2px solid var(--theme-color);
+      border-top: 1px solid var(--theme-color);
+
+      &:first-child {
+        border-radius: 20px 0 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 20px 0 0;
+      }
+    }
+  }
+
+  td:before,
+  th {
+    font-family: $title-font;
+    color: $title-color;
+    font-weight: 600;
+    border: none;
+    padding: 17px 15px;
+  }
+
+  td:before {
+    content: attr(data-title);
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    vertical-align: top;
+    padding: 0;
+    transform: translateY(-50%);
+    display: none;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    color: $body-color;
+    padding: 26px 34px;
+    position: relative;
+    vertical-align: middle;
+    line-height: 1;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  tr {
+    &:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .product-quantity {
+    color: $title-color;
+
+    input {
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  .cart-productimage {
+    border: 1px solid var(--border-color);
+    display: inline-flex;
+    width: 100px;
+    height: 100px;
+    line-height: 85px;
+    overflow: hidden;
+    border-radius: 0;
+    align-items: center;
+    @include respond-below(sm) {
+      width: 93px;
+      height: 93px;
+    }
+
+    img {
+      transform: scale(1.001);
+      width: 100%;
+      transition: all ease 0.4s;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .amount {
+    font-size: 20px;
+    font-weight: 600;
+    color: $black-color;
+    font-family: $title-font;
+  }
+
+  .cart-productname {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: $title-font;
+    color: $title-color;
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+
+  .remove {
+    color: $theme-color;
+    font-size: 18px;
+
+    &:hover {
+      color: $title-color;
+    }
+  }
+
+  .quantity {
+    width: max-content;
+    display: inline-flex;
+  }
+
+  .qty-input {
+    border: 0;
+    padding: 0 25px;
+    min-height: 54px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--title-font);
+    color: var(--black-color);
+  }
+
+  .actions {
+    text-align: right;
+    vertical-align: middle;
+    padding: 15px 30px;
+
+    > .vs-btn {
+      font-size: 16px;
+      padding: 17px 28px;
+      margin-right: 15px;
+      background-color: $secondary-color;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .vs-cart-coupon {
+    float: left;
+    margin: 0;
+    width: 500px;
+    max-width: 100%;
+    display: flex;
+    border: 2px solid $secondary-color;
+    border-radius: 9999px;
+
+    input {
+      height: 50px;
+      color: $title-color;
+      border: none;
+      flex: 1;
+      background-color: transparent;
+      border-radius: 0;
+    }
+
+    .vs-btn {
+      font-size: 16px;
+      padding: 17px 22px;
+      width: max-content;
+      margin: -2px;
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.summary-title {
+  position: relative;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 800;
+}
+.cart_totals tfoot .order-total td {
+  border-top: 2px solid var(--theme-color);
+  text-transform: uppercase;
+  color: var(--theme-color);
+  font-size: 18px;
+  padding: 20px 20px;
+  @include respond-below(sm) {
+    width: 40%;
+    line-height: 1.4;
+    font-size: 15px;
+  }
+}
+.cart_totals {
+  border: 1px solid var(--border-color);
+  background: var(--white-color);
+  box-shadow: 11px 18px 10px #0404040d;
+
+  th,
+  td {
+    vertical-align: top;
+    padding: 14px 20px;
+    border: none;
+    font-size: 14px;
+    color: $title-color;
+    width: 55%;
+
+    &:first-child {
+      font-weight: 800;
+      font-size: 16px;
+      color: var(--title-color);
+      font-family: var(--title-font);
+    }
+  }
+
+  .shipping-calculator-button {
+    display: inline-block;
+    border-bottom: 1px solid;
+    color: $title-color;
+    font-weight: 700;
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+
+  .woocommerce-shipping-destination {
+    margin-bottom: 10px;
+  }
+
+  .woocommerce-shipping-methods {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 10px;
+    label {
+      @include respond-below(sm) {
+        font-size: 14px;
+      }
+      &::before {
+        top: calc((100% - 24px) / 2);
+        line-height: 18px;
+      }
+    }
+  }
+
+  .shipping-calculator-form {
+    display: none;
+
+    p:first-child {
+      margin-top: 20px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .vs-btn {
+      padding: 13px 30px;
+    }
+  }
+
+  .amount {
+    font-weight: 800;
+    font-size: 16px;
+    font-family: var(--title-font);
+  }
+
+  .order-total {
+    .amount {
+      color: $theme-color;
+      font-size: 18px;
+    }
+  }
+
+  input,
+  select {
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-position: right 20px center;
+    font-size: 14px;
+  }
+}
+
+@include md {
+  .cart_table {
+    .amount {
+      font-size: 16px;
+    }
+
+    th {
+      padding: 23px 8px;
+      font-size: 14px;
+    }
+
+    .cart-productname {
+      font-size: 14px;
+    }
+
+    .vs-cart-coupon {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .actions {
+      text-align: center;
+    }
+  }
+}
+
+@include sm {
+  .cart_table {
+    text-align: left;
+    min-width: auto;
+    border-collapse: separate;
+    border-spacing: 0 0px;
+    border: none;
+
+    thead {
+      display: none;
+    }
+
+    td {
+      padding: 15px;
+      display: block;
+      width: 100%;
+      padding-left: 25%;
+      text-align: right;
+      border: 1px solid $border-color;
+      border-bottom: none;
+
+      &::before {
+        display: block;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid $border-color;
+      }
+
+      &.actions {
+        padding-left: 15px;
+        text-align: center;
+
+        > .vs-btn {
+          margin-top: 10px;
+          display: block;
+          width: max-content;
+          margin-left: auto;
+          margin-right: auto;
+
+          &:last-child {
+            margin-right: auto;
+          }
+        }
+      }
+    }
+
+    .vs-cart-coupon {
+      width: 100%;
+      text-align: center;
+      float: none;
+      justify-content: center;
+      display: block;
+      padding-bottom: 10px;
+      border: none;
+      border-radius: 0;
+
+      input {
+        border: 1px solid $secondary-color;
+        border-radius: 9999px;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .cart_totals {
+    th,
+    td {
+      padding: 15px 10px;
+
+      &:first-child {
+        width: 40%;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+.cart_item {
+  &__des {
+    display: grid;
+    gap: 15px;
+  }
+  .star-rating {
+    width: 72px;
+    font-weight: 700;
+    font-size: 10px;
+    &::before {
+      font-weight: 700;
+      color: var(--rating-color);
+    }
+  }
+}
+
+.cart-footer {
+  margin-bottom: 90px;
+}
+.cart-totals--wrapper,
+.vs-cart-coupon {
+  background: var(--grey-color);
+  padding: 50px;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  @include respond-below(md) {
+    padding: 30px;
+  }
+  @include respond-below(sm) {
+    padding: 15px;
+  }
+}
+.vs-cart-coupon {
+  background-color: var(--black-color);
+  .summary-title {
+    color: var(--white-color);
+  }
+  .form-control {
+    height: 63px;
+    margin-bottom: 15px;
+  }
+  .vs-btn {
+    height: 63px;
+  }
+}

@@ -1,0 +1,235 @@
+.vs-pagination {
+  margin-bottom: 30px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 3px;
+    list-style-type: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  span,
+  a {
+    display: inline-block;
+    font-family: $body-font;
+    color: $title-color;
+    text-align: center;
+    position: relative;
+    border: none;
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    font-weight: 400;
+    font-size: 20px;
+    z-index: 1;
+    background-color: #f5f9ff;
+    border-radius: 5px;
+
+    &.active,
+    &:hover {
+      color: $white-color;
+      background-color: $theme-color;
+      box-shadow: none;
+    }
+  }
+}
+
+.post-pagination {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 30px 0;
+  margin: 30px 0;
+}
+
+.post-pagi-box {
+  display: flex;
+  align-items: center;
+
+  > a {
+    color: $title-color;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: $title-font;
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+
+  img {
+    width: 80px;
+    margin-right: 25px;
+  }
+
+  &.next {
+    flex-direction: row-reverse;
+
+    img {
+      margin-right: 0;
+      margin-left: 25px;
+    }
+  }
+}
+
+.pagi-icon {
+  color: #f0f0f0;
+  font-size: 40px;
+}
+
+@include sm {
+  .vs-pagination {
+    span,
+    a {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      font-size: 14px;
+      padding: 0 10px;
+    }
+  }
+
+  .post-pagi-box {
+    > a {
+      font-size: 12px;
+    }
+
+    img {
+      width: 40px;
+      margin-right: 15px;
+    }
+
+    &.next img {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+  }
+}
+
+.pagination {
+  &--style2 {
+    padding: 28px 30px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow);
+    @include respond-below(sm) {
+      padding: 40px 20px;
+    }
+  }
+  &__divider {
+    height: 76px;
+    width: 1px;
+    display: flex;
+    background-color: var(--black-color);
+    @include respond-below(md) {
+      width: 76px;
+      height: 1px;
+      margin: 30px auto;
+    }
+  }
+  &-block {
+    $self: &;
+    &--style1,
+    &--style2 {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      @include respond-below(md) {
+        justify-content: center;
+      }
+      @include respond-below(sm) {
+        flex-wrap: wrap;
+        gap: 35px;
+      }
+      #{$self}__heading {
+        margin-bottom: 5px;
+        font-size: 20px;
+        & > a {
+          color: var(--black-color);
+          &:hover {
+            color: var(--theme-color);
+          }
+        }
+      }
+      #{$self}__cate {
+        font-size: 16px;
+        font-weight: 800;
+        color: var(--text-color);
+        font-family: var(--title-font);
+        &:hover {
+          color: var(--theme-color);
+        }
+      }
+      #{$self}__icon {
+        position: relative;
+        z-index: 1;
+        @include smooth-transition;
+        &::before {
+          position: absolute;
+          content: "";
+          min-width: 67px;
+          min-height: 67px;
+          display: inline-block;
+          top: 50%;
+          transform: translateY(-50%);
+          border: 1px solid var(--border-color);
+          border-radius: 50%;
+          z-index: -1;
+          @include smooth-transition;
+        }
+        & > svg {
+          color: var(--black-color);
+          @include smooth-transition;
+        }
+      }
+      &:hover {
+        #{$self}__heading {
+          & > a {
+            color: var(--theme-color);
+          }
+        }
+        #{$self}__icon {
+          &::before {
+            background-color: var(--theme-color);
+            border-color: var(--white-color);
+          }
+          & > svg {
+            color: var(--white-color);
+          }
+        }
+      }
+    }
+    &--style1 {
+      @include respond-below(sm) {
+        justify-content: start;
+      }
+      #{$self}__icon {
+        padding-left: 30px;
+        &::before {
+          left: 0;
+        }
+      }
+    }
+    &--style2 {
+      @include respond-below(sm) {
+        justify-content: end;
+      }
+      #{$self}__icon {
+        padding-right: 30px;
+        &::before {
+          right: 0;
+        }
+      }
+    }
+  }
+}

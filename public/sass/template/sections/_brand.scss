@@ -1,0 +1,78 @@
+.brand {
+  &-boxes {
+    background-color: var(--grey-color);
+    padding: 72px 130px;
+    margin-bottom: 30px;
+    @include respond-below(md) {
+      padding: 40px 90px;
+    }
+    @include respond-below(sm) {
+      padding: 72px 80px;
+    }
+    @include respond-below(xs) {
+      padding: 30px 80px;
+    }
+  }
+  &-style {
+    min-height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &--layout1,
+  &--layout3 {
+    .icon-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    [data-slick-prev] {
+      left: -21px;
+      @include respond-below(sm) {
+        left: 0;
+      }
+    }
+    [data-slick-next] {
+      left: auto;
+      right: -21px;
+      @include respond-below(sm) {
+        right: 0px;
+      }
+    }
+  }
+  &--layout2 {
+    .brand-style {
+      background-color: var(--grey-color);
+      min-height: 150px;
+      margin: 0 5px;
+      margin-bottom: 30px;
+      transition: all 0.4s ease;
+      &:hover {
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+        background-color: var(--white-color);
+        transition: all 0.4s ease;
+      }
+    }
+  }
+  &--layout3 {
+    [data-slick-prev] {
+      left: 0px;
+    }
+    [data-slick-next] {
+      right: 0px;
+    }
+    .brand-boxes {
+      padding: 0px 130px;
+      background-color: transparent;
+      @include respond-below(sm) {
+        padding: 0 80px;
+      }
+    }
+    .brand-style {
+      @include respond-below(lg) {
+        background-color: var(--white-color);
+        min-height: 85px;
+      }
+    }
+  }
+}

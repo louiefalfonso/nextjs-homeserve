@@ -1,0 +1,149 @@
+:root {
+  --theme-color: #fc6601;
+  --theme-colorRGB: 252, 102, 1;
+  --title-color: #000000;
+  --body-color: #666666;
+  --text-color: #444444;
+  --smoke-color: #868a8a;
+  --tertiary-color: #141414;
+  --black-color: #000000;
+  --blackSand-color: #080808;
+  --white-color: #ffffff;
+  --yellow-color: #fec624;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --rating-color: #ff890a;
+  --border-color: #cecece;
+  --border-blackColor: #272727;
+  --border-blackLightColor: #515151;
+  --border-silverSand: #c0c0c0;
+  --darkJungleGreen-color: #1d1d1d;
+  --silverDeep-color: #a9a9a9;
+  --silverDeeper-color: #858585;
+  --silver-color: #c8c8c8;
+  --silverLight-color: #c1c1c1;
+  --silverLighter-color: #a4a4a4;
+  --silverLightest-color: #f1f1f1;
+  --silverLightLight-color: #fafafa;
+  --charcoalGrey-color: #3f3f3f;
+  --charcoalGreyDeep-color: #555555;
+  --grey-color: #f7f7f7;
+  --arrow-color: #676767;
+  --bg-color: #0d0d0d;
+  --bg-color-h2: #dfeaf1;
+  --bg-color3: #d8d8d8;
+  --bg-color4: #f3f3f3;
+  --bg-color4: #ececec;
+  --title-font: "Rubik", sans-serif;
+  --body-font: "Epilogue", sans-serif;
+  --icon-font: "Font Awesome 5 Pro";
+  --main-container: 1170px;
+  --container-gutters: 30px;
+  --section-space: 120px;
+  --section-space-mobile: 80px;
+  --section-title-space: 80px;
+  --ripple-ani-duration: 5s;
+  --box-shadow: 11px 18px 10px #0404040d;
+}
+
+// Color Variation
+$theme-color: var(--theme-color);
+$title-color: var(--title-color);
+$body-color: var(--body-color);
+$secondary-color: var(--smoke-color);
+$smoke-color: var(--smoke-color);
+$white-color: var(--white-color);
+$black-color: var(--black-color);
+$yellow-color: var(--yellow-color);
+$success-color: var(--success-color);
+$error-color: var(--error-color);
+$border-color: var(--border-color);
+$silverLight-color: #c1c1c1;
+
+// Font Variation
+$icon-font: var(--icon-font);
+
+// Typography
+$title-font: var(--title-font);
+$body-font: var(--body-font);
+$body-font-size: 16px;
+$body-line-Height: 30px;
+$body-font-weight: 400;
+$p-line-Height: 1.8;
+
+// Device Variation
+$hd: 1921px; // Large Device Than 1920
+$xl: 1500px; // Extra large Device
+$ml: 1399px; // Medium Large Device
+$lg: 1199px; // Large Device (Laptop)
+$md: 991px; // Medium Device (Tablet)
+$sm: 767px; // Small Device
+$xs: 575px; // Extra Small Device
+
+// Spacing Count with 5x
+$space-count: 6;
+
+// Section Space  For large Device
+$space: var(--section-space);
+$space-extra: calc(var(--section-space) - 30px);
+
+// Section Space On small Device
+$space-mobile: var(--section-space-mobile);
+$space-mobile-extra: calc(var(--section-space-mobile) - 30px);
+
+// BG Color Mapping
+$bgcolorMap: ();
+$bgcolorMap: map-merge(
+  (
+    "theme": $theme-color,
+    "smoke": $smoke-color,
+    "white": $white-color,
+    "black": $black-color,
+    "title": $title-color,
+  ),
+  $bgcolorMap
+);
+
+// Overlay Color Mapping
+$overlaycolorMap: ();
+$overlaycolorMap: map-merge(
+  (
+    "theme": $theme-color,
+    "title": $title-color,
+    "white": $white-color,
+    "black": $black-color,
+  ),
+  $overlaycolorMap
+);
+
+// Text Color Mapping
+$textColorsMap: ();
+$textColorsMap: map-merge(
+  (
+    "theme": $theme-color,
+    "title": $title-color,
+    "body": $body-color,
+    "white": $white-color,
+    "yellow": $yellow-color,
+    "success": $success-color,
+    "error": $error-color,
+  ),
+  $textColorsMap
+);
+
+// Font Mapping
+$fontsMap: ();
+$fontsMap: map-merge(
+  (
+    "icon": $icon-font,
+    "title": $title-font,
+    "body": $body-font,
+  ),
+  $fontsMap
+);
+
+.home-five,
+.home-four {
+  --theme-color: #fc6601;
+  --smoke-color: #f6f7fc;
+}

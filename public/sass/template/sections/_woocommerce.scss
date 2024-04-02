@@ -1,0 +1,215 @@
+.woocommerce-message,
+.woocommerce-info {
+  position: relative;
+  border: 1px solid $border-color;
+  padding: 11px 20px;
+  background-color: $smoke-color;
+  color: $title-color;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  font-family: $title-font;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &:before {
+    content: "\f06a";
+    font-family: $icon-font;
+    font-weight: 900;
+    margin-right: 10px;
+  }
+}
+
+.woocommerce-notices-wrapper {
+  .woocommerce-message {
+    background-color: $secondary-color;
+    color: $white-color;
+    border-color: transparent;
+    border-radius: 20px;
+
+    &:before {
+      content: "\f14a";
+      font-weight: 300;
+      top: 1px;
+      position: relative;
+    }
+  }
+}
+
+.star-rating {
+  overflow: hidden;
+  position: relative;
+  width: 100px;
+  height: 1.2em;
+  line-height: 1.2em;
+  display: block;
+  font-family: $icon-font;
+  font-weight: 700;
+  font-size: 14px;
+
+  &:before {
+    content: "\f005\f005\f005\f005\f005";
+    color: $yellow-color;
+    float: left;
+    letter-spacing: 3px;
+    font-weight: 400;
+    display: none;
+  }
+
+  span {
+    overflow: hidden;
+    float: left;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding-top: 1.5em;
+
+    &:before {
+      content: "\f005\f005\f005\f005\f005";
+      top: 0;
+      position: absolute;
+      left: 0;
+      color: $yellow-color;
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+  }
+}
+
+.woocommerce-Reviews {
+  .vs-comments-wrap {
+    margin-top: 0;
+  }
+  .star-rating {
+    &:before {
+      display: block;
+    }
+  }
+}
+
+.quantity {
+  position: relative;
+  width: max-content;
+  display: flex;
+  align-items: center;
+
+  > label {
+    font-size: 14px;
+    color: $body-color;
+    font-weight: 700;
+    margin: 0 20px 0 0;
+    font-family: $body-font;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  input {
+    padding: 0 10px 0 10px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    --body-color: #{$title-color};
+    border: 1px solid $smoke-color;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+
+  .qty-btn {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    line-height: 1;
+    display: inline-flex;
+    margin: -4px 0;
+    color: var(--theme-color);
+    border-radius: 0;
+    padding: 4px 20px;
+    font-size: 22px;
+
+    &:hover {
+      background-color: $theme-color;
+      color: $white-color;
+    }
+  }
+
+  .quantity-plus {
+    bottom: 30px;
+    border-radius: 0;
+  }
+}
+
+.rating-select {
+  margin-top: -0.4em;
+
+  label {
+    margin: 0 10px 0 0;
+    display: inline-block;
+  }
+
+  p.stars {
+    margin-bottom: 0;
+    line-height: 1;
+    display: inline-block;
+
+    a {
+      position: relative;
+      height: 14px;
+      width: 18px;
+      text-indent: -999em;
+      display: inline-block;
+      text-decoration: none;
+      @include respond-below(md) {
+        width: 14px;
+      }
+    }
+
+    a::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 14px;
+      line-height: 1;
+      font-family: $icon-font;
+      content: "\f005";
+      font-weight: 400;
+      text-indent: 0;
+      color: $yellow-color;
+    }
+
+    a:hover ~ a::before {
+      content: "\f005";
+      font-weight: 400;
+    }
+
+    &:hover a::before {
+      content: "\f005";
+      font-weight: 700;
+    }
+
+    &.selected a.active::before {
+      content: "\f005";
+      font-weight: 700;
+    }
+
+    &.selected a.active ~ a::before {
+      content: "\f005";
+      font-weight: 400;
+    }
+
+    &.selected a:not(.active)::before {
+      content: "\f005";
+      font-weight: 700;
+    }
+  }
+}

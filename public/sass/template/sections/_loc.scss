@@ -1,0 +1,178 @@
+.loc {
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    height: 100%;
+    width: 100%;
+  }
+  &--layout1 {
+    background-color: var(--black-color);
+  }
+  &-widget {
+    margin-bottom: 30px;
+    @include respond-above(xl) {
+      padding-right: 81px;
+    }
+  }
+  &-map {
+    min-width: 958px;
+    min-height: 478px;
+    position: absolute;
+    right: 245px;
+    bottom: 80px;
+    @include respond-below(xlg) {
+      right: 0;
+    }
+    @include respond-below(md) {
+      right: 0;
+      position: relative;
+      bottom: 0;
+      min-width: 100%;
+    }
+    &__img {
+      opacity: 0.15;
+    }
+    &__points {
+      position: absolute;
+      top: 91px;
+      right: 233px;
+      min-width: 266px;
+      min-height: 198px;
+      @include respond-below(lg) {
+        right: 13%;
+      }
+    }
+    &__point {
+      max-width: 14.3px;
+      max-height: 143px;
+      display: inline-block;
+      background-color: var(--theme-color);
+      border-radius: 50%;
+      width: 14.3px;
+      height: 14.3px;
+      position: absolute;
+      z-index: 1;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      &:nth-child(1) {
+        top: 18.9px;
+        left: 12.8px;
+      }
+      &:nth-child(2) {
+        top: 12.9px;
+        left: auto;
+        right: 12.8px;
+      }
+      &:nth-child(3) {
+        top: auto;
+        bottom: 12.9px;
+        left: 57.8px;
+      }
+      &::before,
+      &::after {
+        content: "";
+        min-width: 40px;
+        min-height: 40px;
+        background-color: var(--theme-color);
+        opacity: 0.2;
+        display: inline-block;
+        border-radius: 50%;
+        top: calc((100% - 40px) / 2);
+        left: calc((100% - 40px) / 2);
+        transform: translate(-50%, -50%);
+        position: absolute;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-name: rippleFixed;
+        z-index: -1;
+        display: none;
+      }
+      &::after {
+        animation-delay: 0.8s;
+      }
+    }
+  }
+  &-block {
+    $self: &;
+    &--style {
+      background-color: transparent;
+      border: 1px solid var(--border-color);
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      padding: 29px 24px;
+      margin: 0 0 -1px 0;
+      @include respond-below(sm) {
+        gap: 15px;
+        padding: 20px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      #{$self}__body {
+        display: flex;
+        align-items: center;
+        gap: 19px;
+        @include respond-below(sm) {
+          gap: 15px;
+        }
+      }
+      #{$self}__icon {
+        min-width: 48px;
+        min-height: 72px;
+        background-color: var(--theme-color);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        @include respond-below(sm) {
+          min-width: 40px;
+          min-height: 65px;
+        }
+      }
+      #{$self}__title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        font-family: var(--body-font);
+        & > a {
+          color: var(--white-color);
+          &:hover {
+            color: var(--theme-color);
+          }
+        }
+      }
+      #{$self}__img {
+        min-width: 84px;
+        min-height: 84px;
+        display: inline-flex;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      #{$self}__text {
+        font-size: 15px;
+        color: var(--silver-color);
+        margin-bottom: 0;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+.tooltip-inner {
+  background-color: var(--theme-color);
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  z-index: 1;
+}
+.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow:before,
+.bs-tooltip-top .tooltip-arrow:before {
+  border-top-color: var(--theme-color);
+}
+.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow:before,
+.bs-tooltip-end .tooltip-arrow:before {
+  border-right-color: var(--theme-color);
+}

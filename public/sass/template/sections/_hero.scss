@@ -1,0 +1,469 @@
+.hero-bg,
+.hero-bg3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: 1;
+  opacity: 0.3;
+  transform: scale(1);
+  transition: transform 7000ms ease, opacity 1500ms ease-in,
+    -webkit-transform 7000ms ease;
+}
+.hero-bg3 {
+  opacity: 1;
+  @include respond-below(sm) {
+    background-position: -1000px 0;
+  }
+}
+.hero {
+  &-layout1,
+  &--layout2,
+  &--layout3 {
+    .hero-title,
+    .hero-text,
+    .hero-btns,
+    .play-btn,
+    .hero-subtitle {
+      animation-fill-mode: both;
+      animation-iteration-count: 1;
+      animation-duration: 1s;
+      animation-delay: 0.3s;
+      animation-name: var(--animation-name);
+    }
+    .slick-current {
+      --animation-name: slideinup;
+    }
+  }
+  &-layout1,
+  &--layout3 {
+    .hero-inner {
+      position: relative;
+      min-height: 834px;
+      display: flex;
+      align-items: center;
+      background-color: var(--title-color);
+      overflow: hidden;
+      padding-top: 100px;
+      @include respond-below(lg) {
+        min-height: 875px;
+      }
+      @include respond-below(lg) {
+        min-height: 775px;
+      }
+      @include respond-below(sm) {
+        min-height: 550px;
+        padding-top: 0px;
+      }
+      @include respond-below(xs) {
+        min-height: 480px;
+      }
+    }
+    .hero-content {
+      position: relative;
+      z-index: 4;
+      padding: 80px 0;
+      @include respond-below(sm) {
+        padding: 0 0;
+      }
+    }
+    .hero-title {
+      color: var(--white-color);
+      margin: -0.2em 0 20px 0;
+      font-size: 70px;
+      line-height: 1.3;
+      animation-delay: 0s;
+      font-weight: 700;
+      @include respond-below(lg) {
+        font-size: 60px;
+      }
+      @include respond-below(md) {
+        font-size: 50px;
+      }
+      @include respond-below(sm) {
+        font-size: 30px;
+      }
+      @include respond-below(xs) {
+        font-size: 24px;
+      }
+    }
+    .hero-text {
+      font-size: 22px;
+      color: var(--white-color);
+      margin: 0 0 40px 0;
+      animation-delay: 0.2s;
+      @include respond-below(lg) {
+        font-size: 20px;
+      }
+      @include respond-below(sm) {
+        font-size: 16px;
+      }
+    }
+    .hero-btns {
+      animation-delay: 0.4s;
+    }
+  }
+  &-layout1 {
+    .slick-slide.slick-current.slick-active {
+      .hero-bg,
+      .hero-bg3 {
+        transform: scale(1.35);
+      }
+    }
+  }
+  &-slider {
+    &--buttons {
+      margin-top: -92px;
+      position: relative;
+      padding-bottom: 49px;
+      @include respond-below(sm) {
+        margin-top: -63px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+  .icon-btn {
+    margin-right: 13px;
+  }
+  &-shape1 {
+    z-index: 2;
+    right: -303px;
+    bottom: -15px;
+    @include respond-below(xlg) {
+      right: -452px;
+    }
+    @include respond-below(lg) {
+      right: -630px;
+    }
+    @include respond-below(md) {
+      display: none;
+    }
+  }
+  &-shape2 {
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+    @include respond-below(xlg) {
+      left: -90px;
+    }
+    @include respond-below(sm) {
+      display: none;
+    }
+  }
+  &-img1 {
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    @include respond-below(xlg) {
+      max-width: 710px;
+    }
+    @include respond-below(lg) {
+      max-width: 520px;
+    }
+    @include respond-below(md) {
+      max-width: 380px;
+    }
+  }
+  &--layout2 {
+    padding-bottom: 43px;
+    @include respond-below(sm) {
+      padding-bottom: 0;
+    }
+    .vs-slider-tab {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: -113px;
+      position: relative;
+      @include respond-below(sm) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 0;
+        column-gap: 15px;
+      }
+
+      .tab-btn {
+        background: var(--white-color);
+        font-size: 16px;
+        font-weight: 700;
+        font-family: var(--title-font);
+        color: var(--black-color);
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        border: 0;
+        padding: 20px 43px;
+        @include smooth-transition;
+        @include respond-below(lg) {
+          padding: 20px 15px;
+        }
+        @include respond-below(md) {
+          padding: 10px 15px;
+          text-align: left;
+          font-size: 15px;
+          line-height: 1.3;
+        }
+        @include respond-below(sm) {
+          padding: 10px 0px;
+        }
+        span {
+          color: var(--theme-color);
+        }
+        &.active {
+          color: var(--theme-color);
+        }
+        &:last-of-type {
+          @include respond-below(xs) {
+            padding-bottom: 0;
+          }
+        }
+        &:hover {
+          color: var(--theme-color);
+        }
+      }
+      .tab-btn-anim {
+        position: absolute;
+        height: 4px;
+        background-color: var(--theme-color);
+        z-index: 1;
+        left: 0;
+        top: auto;
+        transition: transform 0.3s cubic-bezier(0.68, 0, 0.27, 1) 0s,
+          background-color 0.3s ease 0s;
+        transform-origin: 0 50%;
+        bottom: 0;
+        @include respond-below(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+  &--layout3 {
+    .hero-inner {
+      padding-top: 126px;
+      min-height: 760px;
+      padding-bottom: 14px;
+      @include respond-below(sm) {
+        min-height: 720px;
+      }
+    }
+    .icon-btn {
+      border: 1px solid var(--theme-color);
+      background-color: transparent;
+      font-size: 18px;
+      background-color: var(--theme-color);
+      color: var(--white-color);
+      &:hover {
+        background-color: var(--black-color);
+        border-color: var(--black-color);
+      }
+    }
+  }
+}
+
+.hero-content3 {
+  position: relative;
+  z-index: 4;
+  padding: 68px 50px 144px;
+  margin-left: -50px;
+  min-height: 611px;
+  @include respond-below(lg) {
+    padding: 68px 20px 144px;
+    margin-left: 0;
+  }
+  @include respond-below(md) {
+    max-width: 575px;
+  }
+  @include respond-below(sm) {
+    padding: 15px;
+    min-height: auto;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--theme-color);
+    background: linear-gradient(
+      180deg,
+      rgba(252, 102, 1, 0.7) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    top: 0;
+    left: 0;
+    z-index: -1;
+    clip-path: polygon(74% 0, 100% 31%, 100% 100%, 0 100%, 0 0);
+    @include respond-below(sm) {
+      clip-path: polygon(100% 0, 100% 0%, 100% 100%, 0 100%, 0 0);
+      background: linear-gradient(
+        180deg,
+        rgba(252, 102, 1, 0.95) 50%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+  }
+  .hero-title {
+    color: var(--white-color);
+    margin: -0.2em 0 25px 0;
+    font-size: 55px;
+    line-height: 1.2;
+    animation-delay: 0s;
+    font-weight: 800;
+    @include respond-below(lg) {
+      font-size: 60px;
+    }
+    @include respond-below(md) {
+      font-size: 50px;
+    }
+    @include respond-below(sm) {
+      font-size: 25px;
+    }
+    @include respond-below(xs) {
+      font-size: 20px;
+    }
+  }
+  .hero-subtitle {
+    display: inline-block;
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    font-family: var(--title-font);
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    z-index: 1;
+    line-height: 1.2;
+    animation-delay: 0.2s;
+    @include respond-below(sm) {
+      font-size: 13px;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      bottom: 0;
+      left: 0;
+    }
+    &::before {
+      width: 100%;
+      background-color: var(--white-color);
+      z-index: -9;
+    }
+    &::after {
+      width: 34px;
+      background-color: var(--theme-color);
+      z-index: -8;
+    }
+  }
+  .hero-text {
+    font-size: 22px;
+    color: var(--white-color);
+    margin: 0 0 40px 0;
+    @include respond-below(lg) {
+      font-size: 20px;
+    }
+    @include respond-below(sm) {
+      font-size: 16px;
+    }
+  }
+}
+
+.hero-inner {
+  &--style2 {
+    position: relative;
+    padding-top: 142px;
+    min-height: 972px;
+    background-color: var(--bg-color-h2);
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 113px;
+      bottom: -1px;
+      background-color: var(--white-color);
+      @include respond-below(sm) {
+        height: 52px;
+      }
+    }
+    @include respond-below(xlg) {
+      min-height: 875px;
+    }
+    @include respond-below(lg) {
+      min-height: 775px;
+      padding-top: 80px;
+    }
+    @include respond-below(sm) {
+      min-height: 550px;
+      padding-top: 30px;
+    }
+    @include respond-below(xs) {
+      min-height: 480px;
+    }
+  }
+}
+.hero-content {
+  &--style2 {
+    position: relative;
+    @include respond-below(md) {
+      text-align: center;
+    }
+    .hero-text {
+      font-size: 24px;
+      padding-right: 5em;
+      margin-bottom: 82px;
+      animation-delay: 0.2s;
+      @include respond-below(md) {
+        padding-right: 0;
+        margin-bottom: 30px;
+      }
+      @include respond-below(sm) {
+        font-size: 17px;
+      }
+    }
+    .play-btn {
+      position: absolute;
+      bottom: 0;
+      left: 100%;
+      z-index: 9;
+      @include respond-below(md) {
+        position: relative;
+        margin-bottom: 30px;
+        left: 0;
+      }
+      @include respond-below(sm) {
+        --icon-size: 110px;
+      }
+      & > i {
+        &::before {
+          @include respond-below(sm) {
+            min-width: 90px;
+            min-height: 90px;
+          }
+        }
+      }
+    }
+    .hero-title {
+      @include respond-below(sm) {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.hero-shape21,
+.hero-shape22 {
+  bottom: 113px;
+  @include respond-below(sm) {
+    display: none;
+  }
+}
+.hero-shape22 > svg {
+  @include respond-below(md) {
+    max-width: 395px;
+    height: 100%;
+  }
+}

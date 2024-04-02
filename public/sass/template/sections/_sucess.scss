@@ -1,0 +1,100 @@
+.sucess {
+  &--layout1 {
+    overflow: hidden;
+  }
+  &__overlay,
+  &__shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black-color);
+    opacity: 0.7;
+    top: 0;
+  }
+  &__overlay {
+    z-index: -3;
+  }
+  &__shape {
+    height: 98px;
+    background-color: var(--white-color);
+    opacity: 1;
+    top: auto;
+    bottom: -1px;
+    z-index: -1;
+  }
+  &__element1,
+  &__element2 {
+    z-index: -2;
+  }
+  &__element1 {
+    @include respond-below(lg) {
+      width: 300px;
+      height: 240px;
+    }
+    @include respond-below(md) {
+      display: none;
+    }
+    & > svg {
+      @include respond-below(lg) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &-block {
+    $self: &;
+    &--style1 {
+      background-color: var(--darkJungleGreen-color);
+      padding: 57px 47px 50px 47px;
+      background-size: auto;
+      background-position: right top;
+      margin: 30px 1px 0 1px;
+      @include respond-below(lg) {
+        padding: 45px 30px 45px 30px;
+      }
+      @include respond-below(md) {
+        margin: 2px 1px 0 1px;
+      }
+      @include respond-below(sm) {
+        text-align: center;
+      }
+      #{$self}__icon {
+        margin-bottom: 44px;
+        position: relative;
+        display: inline-block;
+        &::before {
+          position: absolute;
+          content: "";
+          min-width: 85px;
+          min-height: 85px;
+          background-color: var(--theme-color);
+          opacity: 0.1;
+          border-radius: 50%;
+          top: 19px;
+          left: auto;
+          right: -30px;
+        }
+      }
+      #{$self}__number {
+        color: var(--white-color);
+        position: relative;
+        padding-top: 20px;
+        & > span {
+          font-size: 40px;
+          color: var(--theme-color);
+        }
+        & > sup {
+          font-size: 24px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+        }
+      }
+      #{$self}__text {
+        color: var(--white-color);
+        margin-bottom: 0;
+      }
+    }
+  }
+}
