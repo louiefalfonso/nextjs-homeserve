@@ -1,5 +1,6 @@
 import FooterArea from "@/components/FooterArea";
 import HeaderArea from "@/components/HeaderArea";
+import MobileMenu from "@/components/MobileMenu";
 import ScrollToTop from "@/components/ScrollToTop";
 import Script from "next/script";
 
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
       
 
       <body>
+        <MobileMenu/>
         <HeaderArea/>
         {children}
         <FooterArea/>
