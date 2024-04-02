@@ -45,7 +45,7 @@ export default function HeroArea() {
                         responsible for any kinds of themes.
                         </p>
                         <a
-                        href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                        href="https://www.youtube.com/watch?v=JSCStxizL58"
                         className="play-btn popup-video"
                         >
                         <i>
@@ -120,7 +120,7 @@ export default function HeroArea() {
                         responsible for any kinds of themes.
                         </p>
                         <a
-                        href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                        href="https://www.youtube.com/watch?v=JSCStxizL58"
                         className="play-btn popup-video"
                         >
                         <i>
@@ -195,7 +195,7 @@ export default function HeroArea() {
                         responsible for any kinds of themes.
                         </p>
                         <a
-                        href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                        href="https://www.youtube.com/watch?v=JSCStxizL58"
                         className="play-btn popup-video"
                         >
                         <i>
@@ -270,7 +270,7 @@ export default function HeroArea() {
                         responsible for any kinds of themes.
                         </p>
                         <a
-                        href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                        href="https://www.youtube.com/watch?v=JSCStxizL58"
                         className="play-btn popup-video"
                         >
                         <i>
