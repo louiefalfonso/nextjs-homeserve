@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" href="css/fontawesome.min.css"/>
         <link rel="stylesheet" href="css/magnific-popup.min.css"/>
-        <link rel="stylesheet" href="css/slick.min.css"/>
+        <link rel="stylesheet" strategy="beforeInteractive" href="css/slick.min.css"/>
         <link rel="stylesheet" href="css/select2.min.css"/>
         <link rel="stylesheet" href="css/style.css"/>
       </head>
