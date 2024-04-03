@@ -9,9 +9,9 @@ export default function WhyChooseUsArea() {
             <g transform="translate(0 -4745.718)">
                 <path
                 d="M484.27,4745.718,270.829,4930.432l418.946,262.4,77.815,43.52Z"
-                fill="#fc6601"
+                fill="#e62419"
                 />
-                <path d="M0,4840.77v506.154H790.923Z" fill="#fc6601" />
+                <path d="M0,4840.77v506.154H790.923Z" fill="#e62419" />
             </g>
             </svg>
         </div>

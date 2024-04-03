@@ -22,13 +22,13 @@ export default function HeroArea() {
                     <path
                         data-name="Rectangle 2"
                         d="M403.6,693.7,245.516,830.63l310.291,194.528,57.633,32.263Z"
-                        fill="#fc6601"
+                        fill="#e62419"
                     />
                     <path
                         data-name="Path 1"
                         d="M-3130-1162.31v415.385h645.38Z"
                         transform="translate(3130 1880)"
-                        fill="#fc6601"
+                        fill="#e62419"
                     />
                     </g>
                 </svg>
