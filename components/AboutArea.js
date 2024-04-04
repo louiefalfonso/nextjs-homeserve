@@ -12,7 +12,7 @@ export default function AboutArea() {
             <div className="col-lg-8 mx-auto">
                 <div className="title-area text-center">
                 <span className="sec-icon">
-                    <img src="img/icons/logo-icon.png" alt="icon" />
+                    <img src="img/logo-homeserve.png" alt="icon" />
                 </span>
                 <span className="sec-subtitle2">WELCOME TO OUR COMPANY</span>
                 <h2 className="sec-title">
@@ -68,7 +68,6 @@ export default function AboutArea() {
                     <div className="signature-box__content">
                     <h4 className="signature-box__title">Rodja Hartmann</h4>
                     <span className="signature-box__desig">Director of Company</span>
-                    <img src="img/about/ab-2-5.png" alt="Avatar 2 1" />
                     </div>
                 </div>
                 </div>

@@ -11,18 +11,16 @@ export default function HeaderArea() {
                 <div className="row align-items-center justify-content-between justify-content-md-center gy-1 text-center text-lg-start">
                 <div className="col-lg-5 col-auto d-none d-lg-block">
                     <p className="header-text">
-                    <span className="header-text__bullet" /> We Will go through all
-                    the stages of construction
+                    30 years' experience taking care of the nation’s homes. 
                     </p>
                 </div>
                 <div className="col-lg-7 col-auto text-center text-md-end">
                     <p className="header-text header-info">
-                    <i className="fal fa-map-marker-alt" /> 203 Madison Ave, New York,
-                    USA
+                    <i className="fal fa-map-marker-alt" /> Leeds, West Yorkshire, England
                     </p>
                     <p className="header-text header-info">
                     <i className="fal fa-envelope" />{" "}
-                    <a href="mailto:info@example.com">info@example.com</a>
+                    <a href="#">info@homeserve.co.uk</a>
                     </p>
                 </div>
                 </div>
@@ -37,7 +35,7 @@ export default function HeaderArea() {
                     <div className="col-lg-3 col-md-auto col">
                         <div className="header-logo">
                         <a href="index.html">
-                            <img src="img/logo-black.png" alt="TechBiz" />
+                            <img src="img/logo-homeserve.png" alt="HomeServe" />
                         </a>
                         </div>
                     </div>

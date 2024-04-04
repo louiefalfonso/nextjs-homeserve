@@ -11,9 +11,6 @@ export default function ProjectsArea() {
             <div className="row align-items-center">
             <div className="col-lg-8 mx-auto">
                 <div className="title-area text-center">
-                <span className="sec-icon">
-                    <img src="img/icons/logo-icon.png" alt="icon" />
-                </span>
                 <span className="sec-subtitle2">OUR WORK SHOWCASE</span>
                 <h2 className="sec-title">EXPLORE RECENT PROJECTS</h2>
                 </div>

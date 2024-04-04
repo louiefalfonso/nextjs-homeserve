@@ -11,7 +11,7 @@ export default function FooterArea() {
                 <div className="col-md-12 col-lg-4 col-xl-4">
                 <div className="widget footer-widget">
                     <div className="widget__logo2">
-                    <img src="img/logo-black.png" alt="logo" />
+                    <img src="img/logo-homeserve.png" alt="logo" />
                     </div>
                     <div className="vs-widget-about">
                     <p className="footer-text2">
@@ -93,7 +93,7 @@ export default function FooterArea() {
                     <div className="media-body">
                         <span className="footer-info_label">Phone No:</span>
                         <div className="footer-info_link">
-                        <a href="tel:+254982156213">+254 (98) 2156 213</a>
+                        <a href="tel:+254982156213">+44 (07) 1234 5678</a>
                         </div>
                     </div>
                     </div>
@@ -109,7 +109,7 @@ export default function FooterArea() {
                     <div className="media-body">
                         <span className="footer-info_label">Email Address:</span>
                         <div className="footer-info_link">
-                        <a href="tel:+254982156213">username@domain.com</a>
+                        <a href="#">info@homeserve.co.uk</a>
                         </div>
                     </div>
                     </div>
@@ -124,7 +124,7 @@ export default function FooterArea() {
                     </div>
                     <div className="media-body">
                         <div className="footer-info_link">
-                        380 St Kilda Road, Jackson New Store, United State
+                        3320 Century Way Thorpe Park, Leeds, West Yorkshire, England
                         </div>
                     </div>
                     </div>

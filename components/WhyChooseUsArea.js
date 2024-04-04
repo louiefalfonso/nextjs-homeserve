@@ -35,8 +35,8 @@ export default function WhyChooseUsArea() {
                     </div>
                     <div className="vs-infobox__content">
                     <span className="vs-infobox__title">Phone No:</span>
-                    <a className="vs-infobox__number" href="tel:+380503184707">
-                        (+380) 50 318 47 07
+                    <a className="vs-infobox__number" href="#">
+                        +44 (07) 1234 5678
                     </a>
                     </div>
                 </div>

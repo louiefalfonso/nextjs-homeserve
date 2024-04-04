@@ -8,9 +8,6 @@ export default function ClientArea() {
             <div className="row">
             <div className="col-lg-7 mx-auto">
                 <div className="title-area text-center">
-                <span className="sec-icon">
-                    <img src="img/icons/logo-icon.png" alt="icon" />
-                </span>
                 <span className="sec-subtitle2">CLIENTS REVIEWS</span>
                 <h2 className="sec-title">OUR TRUSTED FROM OVER 1,500 CLIENTS</h2>
                 </div>
