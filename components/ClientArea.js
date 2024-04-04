@@ -3,7 +3,7 @@ import React from 'react'
 export default function ClientArea() {
   return (
     <>
-    <section className="client--layout1 space-top space-extra-bottom">
+    <section className="client--layout1 space-extra-bottom">
         <div className="container">
             <div className="row">
             <div className="col-lg-7 mx-auto">

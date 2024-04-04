@@ -7,6 +7,7 @@ import ClientArea from "@/components/ClientArea";
 import BrandArea from "@/components/BrandArea";
 import BlogArea from "@/components/BlogArea";
 import NewsletterArea from "@/components/NewsletterArea";
+import TeamArea from "@/components/TeamArea";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
     <ServiceArea/>
     <ProjectsArea/>
     <WhyChooseUsArea/>
+    <TeamArea/>
     <ClientArea/>
     <BlogArea/>
     <NewsletterArea/>
