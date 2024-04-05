@@ -1,11 +1,12 @@
 import React from 'react'
+import Image from 'next/image'
 
 export default function NewsletterArea() {
   return (
     <>
     <div className="project-estimate2 position-relative me-0" data-bg-src="img/textures/estimate-texures-2.png">
         <div className="project-estimate__img">
-            <img src="img/project/project-img-3.png" alt="Project" />
+            <Image src="/img/project/project-img-3.png" alt="Project" width={752} height={494} priority />
         </div>
         <div className="container">
             <div className="project-title2">

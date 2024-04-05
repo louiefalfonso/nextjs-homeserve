@@ -1,11 +1,13 @@
 import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function BlogArea() {
   return (
     <>
     <section className="blog--layout1 z-index-common">
         <div className="blog__backlay position-absolute z-index-n1">
-            <img src="img/blog/blog-backlay-1-1.jpg" alt="blog backlay" />
+            <Image src="/img/blog/blog-backlay-1-1.jpg" alt="Blog" width={1096} height={ 926} priority />
         </div>
         <div className="container">
             <div className="space-extra-bottom">
@@ -21,31 +23,26 @@ export default function BlogArea() {
                 <div className="col-lg-4 col-md-6">
                 <div className="vs-blog blog-style3">
                     <div className="blog-img">
-                    <a href="blog-details.html">
-                        <img
-                        className="blog-img__img"
-                        src="img/blog/blog-h-1-1.jpg"
-                        alt="Blog Image"
-                        />
-                    </a>
+                        <Link href="/blog" passHref>
+                            <Image src="/img/blog/blog-h-1-1.jpg" alt="Blog" className="blog-img__img" width={551} height={432} priority />
+                        </Link>
                     </div>
                     <div className="blog-content">
                     <div className="blog-plus">
-                        <a href="blog-details.html">
-                        <i className="far fa-plus" />
-                        </a>
+                        <Link href="/blog" passHref>
+                            <i className="far fa-plus" />
+                        </Link>
                     </div>
                     <div className="blog-meta">
                         <span className="blog-date">JAN 24 2024</span>
-                        <a className="blog-meta__cn" href="blog.html">
-                        <i className="fal fa-comment-lines" />
-                        14
-                        </a>
+                        <Link href="/blog" passHref>
+                            <i className="fal fa-comment-lines" /> 14
+                        </Link>
                     </div>
                     <h2 className="blog-title">
-                        <a href="blog-details.html">
-                        How to Secure Funding for Your New Home at London
-                        </a>
+                        <Link href="/blog" passHref>
+                            How to Secure Funding for Your New Home at London
+                        </Link>
                     </h2>
                     <p className="blog-text">
                         Lorem ipsum dolor sit amet, coaliqu Aenean sollicitudi, lo bi We
@@ -59,15 +56,14 @@ export default function BlogArea() {
                     <div className="blog-content">
                     <div className="blog-meta">
                         <span className="blog-date">FEB 24 2024</span>
-                        <a className="blog-meta__cn" href="blog.html">
-                        <i className="fal fa-comment-lines" />
-                        14
-                        </a>
+                        <Link href="/blog" passHref>
+                            <i className="fal fa-comment-lines" /> 14
+                        </Link>
                     </div>
                     <h2 className="blog-title">
-                        <a href="blog-details.html">
-                        How to Secure Funding for Your New Home at London
-                        </a>
+                        <Link href="/blog" passHref>
+                            How to Secure Funding for Your New Home at London
+                        </Link>
                     </h2>
                     <p className="blog-text">
                         Lorem ipsum dolor sit amet, coaliqu Aenean sollicitudi, lo bi We
@@ -76,9 +72,9 @@ export default function BlogArea() {
                     </div>
                     <div className="blog-img">
                     <div className="blog-plus">
-                        <a href="blog-details.html">
-                        <i className="far fa-plus" />
-                        </a>
+                        <Link href="/blog" passHref>
+                            <i className="far fa-plus" />
+                        </Link> 
                     </div>
                     <a href="blog-details.html">
                         <img

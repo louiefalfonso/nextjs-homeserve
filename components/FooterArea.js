@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default function FooterArea() {
   return (
@@ -21,26 +22,10 @@ export default function FooterArea() {
                     </div>
                     <div className="social-style2">
                     <ul>
-                        <li>
-                        <a href="facebook.com">
-                            <i className="fab fa-facebook" />
-                        </a>
-                        </li>
-                        <li>
-                        <a href="facebook.com">
-                            <i className="fab fa-twitter" />
-                        </a>
-                        </li>
-                        <li>
-                        <a href="facebook.com">
-                            <i className="fab fa-linkedin" />
-                        </a>
-                        </li>
-                        <li>
-                        <a href="facebook.com">
-                            <i className="fab fa-instagram" />
-                        </a>
-                        </li>
+                        <li><Link href="https://www.facebook.com/" passHref><i className="fab fa-facebook" /></Link></li>
+                        <li><Link href="https://twitter.com/" passHref><i className="fab fa-twitter" /></Link></li>
+                        <li><Link href="https://www.linkedin.com/" passHref><i className="fab fa-linkedin" /></Link></li>
+                        <li><Link href="https://www.linkedin.com/" passHref><i className="fab fa-instagram" /></Link></li>
                     </ul>
                     </div>
                 </div>
@@ -50,33 +35,14 @@ export default function FooterArea() {
                     <h3 className="widget_title2">QUICK LINKS</h3>
                     <div className="footer-menu--style2">
                     <ul>
-                        <li>
-                        <a href="about.html">About</a>
-                        </li>
-                        <li>
-                        <a href="index.html">Career</a>
-                        </li>
-                        <li>
-                        <a href="contact.html">Contact</a>
-                        </li>
-                        <li>
-                        <a href="faq.html">FAQ</a>
-                        </li>
-                        <li>
-                        <a href="blog.html">News</a>
-                        </li>
-                        <li>
-                        <a href="index-2.html">Home</a>
-                        </li>
-                        <li>
-                        <a href="contact.html">Contact</a>
-                        </li>
-                        <li>
-                        <a href="project.html">Portfolio</a>
-                        </li>
-                        <li>
-                        <a href="services.html">Services</a>
-                        </li>
+                        <li><Link href="/" passHref >Home</Link></li>
+                        <li><Link href="/aboutus" passHref >About Us</Link></li>
+                        <li><Link href="/projects" passHref>Projects</Link></li>
+                        <li><Link href="/services" passHref>Services</Link></li>
+                        <li><Link href="/pricing" passHref>Pricing</Link></li>
+                        <li><Link href="/teams" passHref>Teams</Link></li>
+                        <li><Link href="/blog" passHref>Latest News</Link></li>
+                        <li><Link href="/faq" passHref>FAQ</Link></li>
                     </ul>
                     </div>
                 </div>

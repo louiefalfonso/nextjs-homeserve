@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 export default function ClientArea() {
   return (
@@ -69,7 +70,7 @@ export default function ClientArea() {
                 </div>
                 <div className="client-block__header">
                     <div className="client-block__avatar">
-                    <img src="img/client/client-1-2.png" alt="client" />
+                        <Image src="/img/client/client-1-2.png" alt="Clients" width={68} height={68} priority />
                     </div>
                     <div className="client-block__info">
                     <h3 className="client-block__name">Thomas Marko</h3>
@@ -146,7 +147,7 @@ export default function ClientArea() {
                 </div>
                 <div className="client-block__header">
                     <div className="client-block__avatar">
-                    <img src="img/client/client-1-1.png" alt="client" />
+                        <Image src="/img/client/client-1-1.png" alt="Clients" width={68} height={68} priority />
                     </div>
                     <div className="client-block__info">
                     <h3 className="client-block__name">Thomas Marko</h3>
@@ -223,7 +224,7 @@ export default function ClientArea() {
                 </div>
                 <div className="client-block__header">
                     <div className="client-block__avatar">
-                    <img src="img/client/client-1-1.png" alt="client" />
+                        <Image src="/img/client/client-1-1.png" alt="Clients" width={68} height={68} priority />
                     </div>
                     <div className="client-block__info">
                     <h3 className="client-block__name">Thomas Marko</h3>

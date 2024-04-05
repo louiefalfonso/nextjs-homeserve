@@ -23,7 +23,7 @@ export default function HeaderArea() {
                             </p>
                             <p className="header-text header-info">
                             <i className="fal fa-envelope" />{" "}
-                            <a href="#">info@homeserve.co.uk</a>
+                            info@homeserve.co.uk
                             </p>
                         </div>
                     </div>

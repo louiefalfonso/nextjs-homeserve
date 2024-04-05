@@ -36,9 +36,7 @@ export default function TeamArea() {
                         <img src="img/icons/phone-info.svg" alt="phone icon" />
                         </div>
                         <div className="vs-infobox2__content">
-                        <a className="vs-infobox2__number" href="tel:+1288555-013">
-                            +12 (88) 555-013
-                        </a>
+                        <a className="vs-infobox2__number" href="#">+44 (88) 555-013</a>
                         </div>
                     </div>
                     </div>
