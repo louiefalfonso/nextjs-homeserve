@@ -72,10 +72,10 @@ export default function HeaderArea() {
                                         </div>
                                         <div className="col-auto d-none d-md-block">
                                             <div className="header-btns">
-                                            <a href="#" className="vs-btn d-none d-vc-sm-block">
-                                                <span className="vs-btn__bar" />
-                                                Contact Us
-                                            </a>
+                                                <Link href="/contactus" passHref className="vs-btn d-none d-vc-sm-block">
+                                                    <span className="vs-btn__bar" />
+                                                    Contact Us
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
