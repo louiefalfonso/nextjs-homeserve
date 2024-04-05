@@ -1,18 +1,19 @@
 import React from 'react'
+import Image from 'next/image'
 
 export default function AboutArea() {
   return (
     <>
     <section className="space-top space-extra-bottom z-index-common overflow-hidden">
         <div className="about-overlay--style2 position-absolute start-0 bottom-0">
-            <img src="img/about/ab-2-4.png" alt="about" />
+            <Image src="/img/about/ab-2-4.png" alt="HomeServe" width={1176} height={926} priority/>
         </div>
         <div className="container">
             <div className="row">
             <div className="col-lg-8 mx-auto">
                 <div className="title-area text-center">
                 <span className="sec-icon">
-                    <img src="img/logo-homeserve.png" alt="icon" />
+                    <Image src="/img/logo-homeserve.png" alt="HomeServe" width={170 } height={55} priority/>
                 </span>
                 <span className="sec-subtitle2">WELCOME TO OUR COMPANY</span>
                 <h2 className="sec-title">
@@ -26,7 +27,7 @@ export default function AboutArea() {
                 <div className="img-box1--style2">
                 <div className="img-box1__left">
                     <div className="img-box1__img1">
-                    <img src="img/about/ab-2-1.jpg" alt="about" />
+                        <Image src="/img/about/ab-2-1.jpg" alt="HomeServe" width={270} height={252} priority/>
                     </div>
                     <div className="counter-box--style1">
                     <span className="counter-box__number">3526</span>
@@ -35,10 +36,10 @@ export default function AboutArea() {
                 </div>
                 <div className="img-box1__right">
                     <div className="img-box1__img2">
-                    <img src="img/about/ab-2-2.jpg" alt="about" />
+                        <Image src="/img/about/ab-2-2.jpg" alt="HomeServe" width={270} height={165} priority/>
                     </div>
                     <div className="img-box1__img3">
-                    <img src="img/about/ab-2-3.jpg" alt="about" />
+                        <Image src="/img/about/ab-2-3.jpg" alt="HomeServe" width={270} height={290} priority/>
                     </div>
                 </div>
                 </div>
@@ -63,7 +64,7 @@ export default function AboutArea() {
                 </div>
                 <div className="signature-box--style1">
                     <div className="signature-box__img">
-                    <img src="img/about/avatar-2-1.jpg" alt="Avatar 2 1" />
+                        <Image src="/img/about/avatar-2-1.jpg" alt="HomeServe" width={70} height={70} priority/>
                     </div>
                     <div className="signature-box__content">
                     <h4 className="signature-box__title">Rodja Hartmann</h4>

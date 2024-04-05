@@ -38,49 +38,49 @@ export default function HeroArea() {
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-7 col-lg-8">
-                        <div className="hero-content--style2">
-                            <h1 className="hero-title">
-                            We're Providing Industry Solution
-                            </h1>
-                            <p className="hero-text">
-                            HomeServe is a construction and architecture environmentally most
-                            responsible for any kinds of themes.
-                            </p> 
-                            <Link href="https://www.youtube.com/watch?v=JSCStxizL58" className="play-btn popup-video" 
-                        passHref>
-                        <i>
-                            <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="18.875"
-                            height="36.156"
-                            viewBox="0 0 18.875 36.156"
-                            >
-                            <g
-                                id="Triangle_1"
-                                data-name="Triangle 1"
-                                transform="translate(-753.451 -2955.813)"
-                                fill="rgba(0,0,0,0)"
-                                strokeLinejoin="round"
-                            >
-                                <path
-                                d="M 755.951171875 2986.11279296875 L 755.951171875 2961.6689453125 L 768.7118530273438 2973.890869140625 L 755.951171875 2986.11279296875 Z"
-                                stroke="none"
-                                />
-                                <path
-                                d="M 758.451171875 2967.525146484375 L 758.451171875 2980.256591796875 L 765.0975952148438 2973.890869140625 L 758.451171875 2967.525146484375 M 753.451171875 2955.812744140625 L 772.326171875 2973.890869140625 L 753.451171875 2991.968994140625 L 753.451171875 2955.812744140625 Z"
-                                stroke="none"
-                                fill="currentColor"
-                                />
-                            </g>
-                            </svg>
-                        </i>
-                        </Link>
-                        </div>
+                            <div className="hero-content--style2">
+                                <h1 className="hero-title">
+                                We're Providing Industry Solution
+                                </h1>
+                                <p className="hero-text">
+                                HomeServe is a construction and architecture environmentally most
+                                responsible for any kinds of themes.
+                                </p> 
+                                <Link href="https://www.youtube.com/watch?v=JSCStxizL58" className="play-btn popup-video" 
+                            passHref>
+                            <i>
+                                <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18.875"
+                                height="36.156"
+                                viewBox="0 0 18.875 36.156"
+                                >
+                                <g
+                                    id="Triangle_1"
+                                    data-name="Triangle 1"
+                                    transform="translate(-753.451 -2955.813)"
+                                    fill="rgba(0,0,0,0)"
+                                    strokeLinejoin="round"
+                                >
+                                    <path
+                                    d="M 755.951171875 2986.11279296875 L 755.951171875 2961.6689453125 L 768.7118530273438 2973.890869140625 L 755.951171875 2986.11279296875 Z"
+                                    stroke="none"
+                                    />
+                                    <path
+                                    d="M 758.451171875 2967.525146484375 L 758.451171875 2980.256591796875 L 765.0975952148438 2973.890869140625 L 758.451171875 2967.525146484375 M 753.451171875 2955.812744140625 L 772.326171875 2973.890869140625 L 753.451171875 2991.968994140625 L 753.451171875 2955.812744140625 Z"
+                                    stroke="none"
+                                    fill="currentColor"
+                                    />
+                                </g>
+                                </svg>
+                            </i>
+                            </Link>
+                            </div>
                         </div>
                         <div className="col-12">
-                        <div className="hero-img--h2 z-index-common">
-                            <Image src="/img/hero/hero-2-2.jpg" alt="HomeServe" width={1920} height={972} priority/>
-                        </div>
+                            <div className="hero-img--h2 z-index-common">
+                                <Image src="/img/hero/hero-2-2.jpg" alt="HomeServe" width={1920} height={972} priority/>
+                            </div>
                         </div>
                     </div>
                 </div>

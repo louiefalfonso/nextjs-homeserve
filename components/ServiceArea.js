@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function ServiceArea() {
   return (
@@ -46,12 +48,7 @@ export default function ServiceArea() {
                     <img src="img/icons/service-icon-2-1.svg" alt="icon" />
                     </div>
                     <h3 className="service-block__title h4">
-                    <a
-                        className="service-block__title__link"
-                        href="service-details.html"
-                    >
-                        Building Construction
-                    </a>
+                    <Link href="/services/building-construction"  className="service-block__title__link" passHref>Building Construction</Link>
                     </h3>
                     <div className="overflow-hidden">
                     <div className="service-block__hide">
@@ -59,14 +56,14 @@ export default function ServiceArea() {
                         Lorem ipsum dolor sit amet, con auctor aliquet. Aenean
                         sollicitudi bibendum auctor.
                         </p>
-                        <a href="service-details.html" className="service-block__link">
+                        <Link href="/services/building-construction"  className="service-block__link" passHref>
                         <svg width="30.002" height="7.002" viewBox="0 0 30.002 7.002">
                             <path
                             d="M573.251,2284.12H547v-1.24h26.251V2280q1.875,1.756,3.751,3.515l-3.726,3.473-.025.014Z"
                             transform="translate(-547 -2279.996)"
                             />
                         </svg>
-                        </a>
+                        </Link>
                     </div>
                     </div>
                 </div>
@@ -82,12 +79,7 @@ export default function ServiceArea() {
                     <img src="img/icons/service-icon-2-2.svg" alt="icon" />
                     </div>
                     <h3 className="service-block__title h4">
-                    <a
-                        className="service-block__title__link"
-                        href="service-details.html"
-                    >
-                        Traditional Designs
-                    </a>
+                        <Link href="/services/traditional-designs"  className="service-block__title__link" passHref>Traditional Designs</Link>
                     </h3>
                     <div className="overflow-hidden">
                     <div className="service-block__hide">
@@ -95,14 +87,14 @@ export default function ServiceArea() {
                         Lorem ipsum dolor sit amet, con auctor aliquet. Aenean
                         sollicitudi bibendum auctor.
                         </p>
-                        <a href="service-details.html" className="service-block__link">
+                        <Link href="/services/traditional-designs"  className="service-block__link" passHref>
                         <svg width="30.002" height="7.002" viewBox="0 0 30.002 7.002">
                             <path
                             d="M573.251,2284.12H547v-1.24h26.251V2280q1.875,1.756,3.751,3.515l-3.726,3.473-.025.014Z"
                             transform="translate(-547 -2279.996)"
                             />
                         </svg>
-                        </a>
+                        </Link>
                     </div>
                     </div>
                 </div>
