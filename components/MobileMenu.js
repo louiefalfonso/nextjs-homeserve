@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function MobileMenu() {
   return (
@@ -9,18 +11,19 @@ export default function MobileMenu() {
             <i className="fal fa-times" />
             </button>
             <div className="mobile-logo">
-            <a href="index.html">
-                <img src="img/logo-homeserve.png" alt="Consik" className="logo" />
-            </a>
+              <Link href="/" passHref>
+                  <Image src="/img/logo-homeserve.png"  className="logo"  alt="HomeServe" width={170} height={55} priority/>
+              </Link>
             </div>
             <div className="vs-mobile-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="blog.html">News</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><Link href="/" passHref>Home</Link></li>
+                <li><Link href="/aboutus" passHref>About Us</Link></li>
+                <li><Link href="/projects" passHref>Projects</Link></li>
+                <li><Link href="/services" passHref>Services</Link></li>
+                <li><Link href="/pricing" passHref>Pricing</Link></li>
+                <li><Link href="/faq" passHref>FAQ</Link></li>
+                <li><Link href="/contactus" passHref>Contact Us</Link></li>
             </ul>
             </div>
         </div>

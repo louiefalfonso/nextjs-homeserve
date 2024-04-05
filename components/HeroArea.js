@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 export default function HeroArea() {
   return (
@@ -14,7 +15,7 @@ export default function HeroArea() {
             <div>
             <div className="hero-inner--style2 z-index-common">
                 <div className="hero-shape21 position-absolute end-0 z-index-n1">
-                <img src="img/hero/hero-2-1.png" alt="hero 2" />
+                    <Image src="/img/hero/hero-2-1.png"alt="HomeServe" width={1920} height={972} priority/>
                 </div>
                 <div className="hero-shape22 position-absolute start-0  z-index-n1">
                 <svg width="645.38" height="439.38" viewBox="0 0 645.38 439.38">
