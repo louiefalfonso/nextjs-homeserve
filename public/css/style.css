@@ -5389,6 +5389,11 @@ input[type=checkbox] ~ .widget__submit--label::before, input[type=checkbox] ~ .w
   display: inline-block;
   position: relative;
 }
+
+.main-menu ul li .active{
+  color: var(--theme-color) !important;
+}
+
 .main-menu ul li.menu-item-has-children > a:after {
   content: "\f078";
   position: relative;

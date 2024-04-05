@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 export default function WhyChooseUsArea() {
   return (
@@ -20,7 +21,7 @@ export default function WhyChooseUsArea() {
             <div className="col-xl-5 col-lg-7 col-md-8 mx-md-auto mx-lg-0">
                 <div className="title-area text-center text-lg-start">
                 <span className="sec-subtitle">WHY CHOOSE US</span>
-                <h2 className="sec-title">WE REDEFINE WHAT'S POSSIBLE</h2>
+                    <h2 className="sec-title">WE REDEFINE WHAT'S POSSIBLE</h2>
                 </div>
             </div>
             <div className="col-xl-4 col-lg-5 col-md-6 mx-md-auto mx-lg-0">
@@ -46,7 +47,7 @@ export default function WhyChooseUsArea() {
             <div className="row align-items-center">
             <div className="col-lg-5">
                 <div className="choose-img">
-                <img src="img/choose/choose-2-1.jpg" alt="choose" />
+                    <Image src="/img/choose/choose-2-1.jpg" alt="Why Choose Us" width={473} height={556}  priority/>
                 </div>
             </div>
             <div className="col-lg-7">

@@ -1,11 +1,13 @@
 import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function ProjectsArea() {
   return (
     <>
     <section className="project--layout2 z-index-common space-top space-extra-bottom overflow-hidden">
         <div className="project-element1 position-absolute z-index-n1">
-            <img src="img/project/element-1.png" alt="Project" />
+            <Image src="/img/project/element-1.png" alt="Project" width={841} height={579} priority/>
         </div>
         <div className="container">
             <div className="row align-items-center">
@@ -114,7 +116,7 @@ export default function ProjectsArea() {
                     tabIndex={0}
                 >
                     <div className="project-banner">
-                    <img src="img/project/project-h2-1.jpg" alt="project" />
+                    <Image src="/img/project/project-h2-1.jpg" alt="Project" width={837} height={571} priority/>
                     </div>
                 </div>
                 <div
@@ -125,7 +127,7 @@ export default function ProjectsArea() {
                     tabIndex={0}
                 >
                     <div className="project-banner">
-                    <img src="img/project/project-h2-2.jpg" alt="project" />
+                        <Image src="/img/project/project-h2-2.jpg" alt="Project" width={837} height={571} priority/>
                     </div>
                 </div>
                 <div
@@ -136,7 +138,7 @@ export default function ProjectsArea() {
                     tabIndex={0}
                 >
                     <div className="project-banner">
-                    <img src="img/project/project-h2-1.jpg" alt="project" />
+                        <Image src="/img/project/project-h2-1.jpg" alt="Project" width={837} height={571} priority/>
                     </div>
                 </div>
                 <div
@@ -154,10 +156,10 @@ export default function ProjectsArea() {
             </div>
             </div>
             <div className="section-button d-flex justify-content-center">
-            <a href="project.html" className="vs-btn">
-                <span className="vs-btn__bar" />
-                VIEW ALL PROJECTS
-            </a>
+                <Link href="/projects" passHref className="vs-btn">
+                    <span className="vs-btn__bar" />
+                    VIEW ALL PROJECTS
+                </Link>
             </div>
         </div>
     </section>

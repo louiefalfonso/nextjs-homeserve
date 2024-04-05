@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function TeamArea() {
   return (
@@ -9,7 +11,7 @@ export default function TeamArea() {
             <div className="col-lg-8 mx-auto">
                 <div className="title-area text-center">
                 <span className="sec-icon">
-                    <img src="img/logo-homeserve.png" alt="icon" />
+                    <Image src="/img/logo-homeserve.png" alt="HomeServe" width={170} height={55} priority/>
                 </span>
                 <span className="sec-subtitle2">OUR SKILLED TEAM</span>
                 <h2 className="sec-title">MEET THE EXPERT TEAM</h2>
@@ -22,12 +24,9 @@ export default function TeamArea() {
                 <div className="vsteam-style__body">
                     <div className="vsteam-style__content">
                     <h3 className="vsteam-style__title">
-                        <a
-                        className="vsteam-style__title__link"
-                        href="team-details.html"
-                        >
-                        Harald Gindl
-                        </a>
+                        <Link href="/teams" passHref className="vsteam-style__title__link">
+                            Harald Gindl
+                        </Link>
                     </h3>
                     <span className="vsteam-style__designation">
                         Head Railway Construction
