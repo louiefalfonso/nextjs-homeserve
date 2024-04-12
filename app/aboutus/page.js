@@ -3,6 +3,10 @@ import Link from 'next/link'
 import AboutArea from '@/components/AboutArea'
 import AboutHistory from '@/components/AboutHistory'
 import ServiceArea from '@/components/ServiceArea'
+import ClientArea from '@/components/ClientArea'
+import FAQArea from '@/components/FAQArea'
+import RequestQuote from '@/components/RequestQuote'
+import TeamArea from '@/components/TeamArea'
 
 export default function page() {
   return (
@@ -27,6 +31,10 @@ export default function page() {
     <AboutArea/>
     <AboutHistory/>
     <ServiceArea/>
+    <FAQArea/>
+    <TeamArea/>
+    <ClientArea/>
+    <RequestQuote/>
     </>
   )
 }
