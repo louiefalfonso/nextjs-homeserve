@@ -76,13 +76,9 @@ export default function BlogArea() {
                             <i className="far fa-plus" />
                         </Link> 
                     </div>
-                    <a href="blog-details.html">
-                        <img
-                        className="blog-img__img"
-                        src="img/blog/blog-h-1-2.jpg"
-                        alt="Blog Image"
-                        />
-                    </a>
+                    <Link href="/blog" passHref>
+                            <Image src="/img/blog/blog-h-1-2.jpg" alt="Blog" className="blog-img__img" width={551} height={432} priority />
+                    </Link>
                     </div>
                 </div>
                 </div>
