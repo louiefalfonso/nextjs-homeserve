@@ -5,7 +5,7 @@ export default function FooterArea() {
   return (
     <>
     <footer className="footer-layout--style2 z-index-common">
-        <div className="footer-layout__bg" data-bg-src="img/footer/footer-bg-h2.jpg"/>
+        <div className="footer-layout__bg" data-bg-src="../img/footer/footer-bg-h2.jpg"/>
         <div className="container">
             <div className="footer-layout__top">
             <div className="row justify-content-center justify-content-lg-between">
@@ -53,7 +53,7 @@ export default function FooterArea() {
                     <div className="footer-info--style3">
                     <div className="footer-info_icon">
                         <i>
-                        <img src="img/icons/phone-info.svg" alt="phone-info" />
+                        <img src="../img/icons/phone-info.svg" alt="phone-info" />
                         </i>
                     </div>
                     <div className="media-body">
@@ -67,7 +67,7 @@ export default function FooterArea() {
                     <div className="footer-info_icon">
                         <i>
                         <img
-                            src="img/icons/open-mail-info.svg"
+                            src="../img/icons/open-mail-info.svg"
                             alt="open-email-info"
                         />
                         </i>
@@ -83,7 +83,7 @@ export default function FooterArea() {
                     <div className="footer-info_icon">
                         <i>
                         <img
-                            src="img/icons/location-info.svg"
+                            src="../img/icons/location-info.svg"
                             alt="location info"
                         />
                         </i>

@@ -18,12 +18,12 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
         <link rel="icon" type="image/png" href="img/favicon.png"></link>
-        <link rel="stylesheet" href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="css/fontawesome.min.css"/>
-        <link rel="stylesheet" href="css/magnific-popup.min.css"/>
-        <link rel="stylesheet" strategy="beforeInteractive" href="css/slick.min.css"/>
-        <link rel="stylesheet" href="css/select2.min.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../css/fontawesome.min.css"/>
+        <link rel="stylesheet" href="../css/magnific-popup.min.css"/>
+        <link rel="stylesheet" strategy="beforeInteractive" href="../css/slick.min.css"/>
+        <link rel="stylesheet" href="../css/select2.min.css"/>
+        <link rel="stylesheet" href="../css/style.css"/>
       </head>
       
 
@@ -36,15 +36,15 @@ export default function RootLayout({ children }) {
       </body>
 
 
-      <Script src="js/vendor/jquery-3.6.0.min.js"/>
-      <Script src="js/slick.min.js"/>
-      <Script src="js/bootstrap.min.js"/>
-      <Script src="js/wow.min.js"/>
-      <Script src="js/jquery.magnific-popup.min.js"/>
-      <Script src="js/imagesloaded.pkgd.min.js"/>
-      <Script src="js/isotope.pkgd.min.js"/>
-      <Script src="js/select2.min.js"/>
-      <Script src="js/main.js"/>
+      <Script src="../js/vendor/jquery-3.6.0.min.js"/>
+      <Script src="../js/slick.min.js"/>
+      <Script src="../js/bootstrap.min.js"/>
+      <Script src="../js/wow.min.js"/>
+      <Script src="../js/jquery.magnific-popup.min.js"/>
+      <Script src="../js/imagesloaded.pkgd.min.js"/>
+      <Script src="../js/isotope.pkgd.min.js"/>
+      <Script src="../js/select2.min.js"/>
+      <Script src="../js/main.js"/>
     </html>
   );
 }
