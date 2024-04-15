@@ -1,5 +1,6 @@
 import ProjectGrid from '@/components/ProjectGrid'
 import RequestQuote from '@/components/RequestQuote'
+import Link from 'next/link'
 import React from 'react'
 
 export default function page() {
@@ -15,8 +16,7 @@ export default function page() {
           </p>
           <div className="breadcumb-menu-wrap">
             <ul className="breadcumb-menu">
-              <li>
-                <a href="index.html">Home</a>
+              <li><Link href="/" passHref>Home</Link>
               </li>
               <li>OUR PROJECTS</li>
             </ul>

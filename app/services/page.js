@@ -2,6 +2,7 @@ import FAQArea from '@/components/FAQArea'
 import RequestQuote from '@/components/RequestQuote'
 import ServiceArea from '@/components/ServiceArea'
 import WhyChooseUsArea from '@/components/WhyChooseUsArea'
+import Link from 'next/link'
 import React from 'react'
 
 export default function page() {
@@ -17,9 +18,7 @@ export default function page() {
           </p>
           <div className="breadcumb-menu-wrap">
             <ul className="breadcumb-menu">
-              <li>
-                <a href="index.html">Home</a>
-              </li>
+              <li><Link href="/" passHref>Home</Link></li>
               <li>SERVICES</li>
             </ul>
           </div>
