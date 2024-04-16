@@ -12,7 +12,7 @@ export default function FooterArea() {
                 <div className="col-md-12 col-lg-4 col-xl-4">
                 <div className="widget footer-widget">
                     <div className="widget__logo2">
-                    <img src="img/logo-homeserve.png" alt="logo" />
+                    <img src="../img/logo-homeserve.png" alt="logo" />
                     </div>
                     <div className="vs-widget-about">
                     <p className="footer-text2">

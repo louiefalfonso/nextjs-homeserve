@@ -36,26 +36,25 @@ export default function TeamArea() {
                         <img src="img/icons/phone-info.svg" alt="phone icon" />
                         </div>
                         <div className="vs-infobox2__content">
-                        <a className="vs-infobox2__number" href="#">+44 (88) 555-013</a>
+                        <span className="vs-infobox2__number" href="#">+44 (88) 555-013</span>
                         </div>
                     </div>
                     </div>
                     <div className="vsteam-style__media">
-                    <a href="team-details.html">
-                        <img
+                            <img
                         src="img/team/team-member-1-1.png"
                         alt="Team Member 1"
                         className="team-block__member--img"
                         />
-                    </a>
+                        
                     </div>
                 </div>
                 <div className="social-style vsteam-style__social">
                     <ul>
-                    <li><Link href="https://www.facebook.com/" passHref><i className="fab fa-facebook" /></Link></li>
-                    <li><Link href="https://twitter.com/" passHref><i className="fab fa-twitter" /></Link></li>
-                    <li><Link href="https://www.linkedin.com/" passHref><i className="fab fa-linkedin" /></Link></li>
-                    <li><Link href="https://www.linkedin.com/" passHref><i className="fab fa-instagram" /></Link></li>    
+                        <li><Link href="https://www.facebook.com/" passHref><i className="fab fa-facebook" /></Link></li>
+                        <li><Link href="https://twitter.com/" passHref><i className="fab fa-twitter" /></Link></li>
+                        <li><Link href="https://www.linkedin.com/" passHref><i className="fab fa-linkedin" /></Link></li>
+                        <li><Link href="https://www.linkedin.com/" passHref><i className="fab fa-instagram" /></Link></li>    
                     </ul>
                 </div>
                 <div className="vsteam-style__shape">
@@ -79,12 +78,9 @@ export default function TeamArea() {
                 <div className="vsteam-style__body">
                     <div className="vsteam-style__content">
                     <h3 className="vsteam-style__title">
-                        <a
-                        className="vsteam-style__title__link"
-                        href="team-details.html"
-                        >
-                        Thomas Walkar
-                        </a>
+                        <Link href="/teams" passHref className="vsteam-style__title__link">
+                            Thomas Walkar
+                        </Link>
                     </h3>
                     <span className="vsteam-style__designation">
                         Head Railway Construction
@@ -94,39 +90,26 @@ export default function TeamArea() {
                         <img src="img/icons/phone-info.svg" alt="phone icon" />
                         </div>
                         <div className="vs-infobox2__content">
-                        <a className="vs-infobox2__number" href="tel:+1288555-013">
+                        <span className="vs-infobox2__number" href="tel:+1288555-013">
                             +12 (88) 555-013
-                        </a>
+                        </span>
                         </div>
                     </div>
                     </div>
                     <div className="vsteam-style__media">
-                    <a href="team-details.html">
                         <img
                         src="img/team/team-member-1-2.png"
                         alt="Team Member 1"
                         className="team-block__member--img"
                         />
-                    </a>
                     </div>
                 </div>
                 <div className="social-style vsteam-style__social">
                     <ul>
-                    <li>
-                        <a href="facebook.com">
-                        <i className="fab fa-facebook" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="facebook.com">
-                        <i className="fab fa-twitter" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="facebook.com">
-                        <i className="fab fa-linkedin" />
-                        </a>
-                    </li>
+                        <li><Link href="https://www.facebook.com/" passHref><i className="fab fa-facebook" /></Link></li>
+                        <li><Link href="https://twitter.com/" passHref><i className="fab fa-twitter" /></Link></li>
+                        <li><Link href="https://www.linkedin.com/" passHref><i className="fab fa-linkedin" /></Link></li>
+                        <li><Link href="https://www.linkedin.com/" passHref><i className="fab fa-instagram" /></Link></li> 
                     </ul>
                 </div>
                 <div className="vsteam-style__shape">
@@ -150,12 +133,9 @@ export default function TeamArea() {
                 <div className="vsteam-style__body">
                     <div className="vsteam-style__content">
                     <h3 className="vsteam-style__title">
-                        <a
-                        className="vsteam-style__title__link"
-                        href="team-details.html"
-                        >
-                        Hazel Kalim
-                        </a>
+                        <Link href="/teams" passHref className="vsteam-style__title__link">
+                            Hazel Kalim
+                        </Link>
                     </h3>
                     <span className="vsteam-style__designation">
                         Head Railway Construction
@@ -165,39 +145,26 @@ export default function TeamArea() {
                         <img src="img/icons/phone-info.svg" alt="phone icon" />
                         </div>
                         <div className="vs-infobox2__content">
-                        <a className="vs-infobox2__number" href="tel:+1288555-013">
+                        <span className="vs-infobox2__number" href="tel:+1288555-013">
                             +12 (88) 555-013
-                        </a>
+                        </span>
                         </div>
                     </div>
                     </div>
                     <div className="vsteam-style__media">
-                    <a href="team-details.html">
                         <img
                         src="img/team/team-member-1-3.png"
                         alt="Team Member 1"
                         className="team-block__member--img"
                         />
-                    </a>
                     </div>
                 </div>
                 <div className="social-style vsteam-style__social">
                     <ul>
-                    <li>
-                        <a href="facebook.com">
-                        <i className="fab fa-facebook" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="facebook.com">
-                        <i className="fab fa-twitter" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="facebook.com">
-                        <i className="fab fa-linkedin" />
-                        </a>
-                    </li>
+                        <li><Link href="https://www.facebook.com/" passHref><i className="fab fa-facebook" /></Link></li>
+                        <li><Link href="https://twitter.com/" passHref><i className="fab fa-twitter" /></Link></li>
+                        <li><Link href="https://www.linkedin.com/" passHref><i className="fab fa-linkedin" /></Link></li>
+                        <li><Link href="https://www.linkedin.com/" passHref><i className="fab fa-instagram" /></Link></li> 
                     </ul>
                 </div>
                 <div className="vsteam-style__shape">
