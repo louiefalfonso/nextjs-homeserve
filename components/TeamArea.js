@@ -52,21 +52,10 @@ export default function TeamArea() {
                 </div>
                 <div className="social-style vsteam-style__social">
                     <ul>
-                    <li>
-                        <a href="facebook.com">
-                        <i className="fab fa-facebook" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="facebook.com">
-                        <i className="fab fa-twitter" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="facebook.com">
-                        <i className="fab fa-linkedin" />
-                        </a>
-                    </li>
+                    <li><Link href="https://www.facebook.com/" passHref><i className="fab fa-facebook" /></Link></li>
+                    <li><Link href="https://twitter.com/" passHref><i className="fab fa-twitter" /></Link></li>
+                    <li><Link href="https://www.linkedin.com/" passHref><i className="fab fa-linkedin" /></Link></li>
+                    <li><Link href="https://www.linkedin.com/" passHref><i className="fab fa-instagram" /></Link></li>    
                     </ul>
                 </div>
                 <div className="vsteam-style__shape">

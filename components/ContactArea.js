@@ -102,7 +102,7 @@ export default function ContactArea() {
                         <div className="media-body">
                         <span className="footer-info_label">Phone No:</span>
                         <div className="footer-info_link">
-                            <a href="tel:+254982156213">+254 (98) 2156 213</a>
+                            +44 (07) 1234 5678
                         </div>
                         </div>
                     </div>
@@ -118,7 +118,7 @@ export default function ContactArea() {
                         <div className="media-body">
                         <span className="footer-info_label">Email Address:</span>
                         <div className="footer-info_link">
-                            <a href="tel:+254982156213">username@domain.com</a>
+                            Info@Homeserve.Co.Uk
                         </div>
                         </div>
                     </div>
@@ -133,7 +133,7 @@ export default function ContactArea() {
                         </div>
                         <div className="media-body">
                         <div className="footer-info_link">
-                            380 St Kilda Road, Jackson New Store, United State
+                            3320 Century Way Thorpe Park, Leeds, West Yorkshire, England
                         </div>
                         </div>
                     </div>

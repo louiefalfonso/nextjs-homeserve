@@ -112,15 +112,9 @@ export default function FooterArea() {
                 <div className="widget widget_nav_menu footer-widget">
                     <div className="menu-all-pages-container">
                     <ul className="menu justify-content-center justify-content-lg-end ">
-                        <li>
-                        <a href="contact.html">PRIVACY</a>
-                        </li>
-                        <li>
-                        <a href="faq.html">TERMS &amp; CONDITION</a>
-                        </li>
-                        <li>
-                        <a href="about.html">About Us</a>
-                        </li>
+                        <li><Link href="/contactus" passHref>PRIVACY</Link></li>
+                        <li><Link href="/contactus" passHref>TERMS &amp; CONDITION</Link></li>
+                        <li><Link href="/aboutus" passHref>About Us</Link></li>
                     </ul>
                     </div>
                 </div>

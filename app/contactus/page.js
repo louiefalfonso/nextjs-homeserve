@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import ContactArea from '@/components/ContactArea'
 import FAQArea1 from '@/components/FAQArea1'
-import RequestQuote from '@/components/RequestQuote'
 
 export default function page() {
   return (
@@ -27,7 +26,6 @@ export default function page() {
     </div>
     <ContactArea/>
     <FAQArea1/>
-    <RequestQuote/>
     </>
   )
 }
